@@ -8,24 +8,28 @@ export default function EventHero() {
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1519167758481-83f29da8ae39?w=1920&q=80",
+      type: "video",
+      video: "/hero-bg.mp4",
       title: "Making Your Moments",
       highlight: "Memorable",
       subtitle: "Transform your vision into extraordinary celebrations with our premium event planning services"
     },
     {
+      type: "image",
       image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=80",
       title: "Elegant Wedding",
       highlight: "Celebrations",
       subtitle: "Creating magical wedding experiences that you and your guests will cherish forever"
     },
     {
+      type: "image",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80",
       title: "Corporate Events",
       highlight: "Perfected",
       subtitle: "Professional event management for conferences, seminars, and corporate gatherings"
     },
     {
+      type: "image",
       image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1920&q=80",
       title: "Birthday Parties",
       highlight: "Reimagined",
@@ -107,17 +111,33 @@ export default function EventHero() {
           exit="exit"
           className="absolute inset-0"
         >
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${slides[currentSlide].image})`
-            }}
-          >
-            {/* Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>
-          </div>
+          {/* Background Media */}
+          {slides[currentSlide].type === "video" ? (
+            <div className="absolute inset-0">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+                src={slides[currentSlide].video}
+              />
+              {/* Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>
+            </div>
+          ) : (
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${slides[currentSlide].image})`
+              }}
+            >
+              {/* Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>
+            </div>
+          )}
         </motion.div>
       </AnimatePresence>
 
