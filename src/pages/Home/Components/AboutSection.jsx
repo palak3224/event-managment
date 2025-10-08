@@ -32,7 +32,7 @@ const AboutSection = () => {
                             <TiltedCard
                                 imageSrc="https://fossetta.in/images/about/about.jpg"
                                 altText="Kendrick Lamar - GNX Album Cover"
-                                captionText="Kendrick Lamar - GNX"
+                                captionText="Event Management"
                                 containerHeight="500px"
                                 containerWidth="500px"
                                 imageHeight="500px"

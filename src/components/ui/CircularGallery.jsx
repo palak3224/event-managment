@@ -22,6 +22,10 @@ function autoBind(instance) {
   });
 }
 
+function isMobileDevice() {
+  return window.innerWidth <= 768;
+}
+
 function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'black') {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
@@ -268,14 +272,30 @@ class Media {
         this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height];
       }
     }
-    this.scale = this.screen.height / 1500;
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    
+    // Mobile-specific sizing
+    const isMobile = isMobileDevice();
+    const baseScale = this.screen.height / 1500;
+    
+    if (isMobile) {
+      // Smaller images for mobile: 60% of desktop size
+      this.plane.scale.y = (this.viewport.height * (540 * baseScale)) / this.screen.height;
+      this.plane.scale.x = (this.viewport.width * (420 * baseScale)) / this.screen.width;
+    } else {
+      // Desktop sizing (original)
+      this.plane.scale.y = (this.viewport.height * (900 * baseScale)) / this.screen.height;
+      this.plane.scale.x = (this.viewport.width * (700 * baseScale)) / this.screen.width;
+    }
+    
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
-    this.padding = 2;
+    this.padding = isMobile ? 1.5 : 2;
     this.width = this.plane.scale.x + this.padding;
     this.widthTotal = this.width * this.length;
     this.x = this.width * this.index;
+  }
+  
+  updateBend(newBend) {
+    this.bend = newBend;
   }
 }
 
@@ -285,6 +305,7 @@ class App {
     {
       items,
       bend,
+      mobileBend,
       textColor = '#ffffff',
       borderRadius = 0,
       font = 'bold 30px Figtree',
@@ -294,6 +315,8 @@ class App {
   ) {
     document.documentElement.classList.remove('no-js');
     this.container = container;
+    this.desktopBend = bend;
+    this.mobileBend = mobileBend !== undefined ? mobileBend : bend * 0.5;
     this.scrollSpeed = scrollSpeed;
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
     this.onCheckDebounce = debounce(this.onCheck, 200);
@@ -302,10 +325,15 @@ class App {
     this.createScene();
     this.onResize();
     this.createGeometry();
-    this.createMedias(items, bend, textColor, borderRadius, font);
+    this.createMedias(items, this.getCurrentBend(), textColor, borderRadius, font);
     this.update();
     this.addEventListeners();
   }
+  
+  getCurrentBend() {
+    return isMobileDevice() ? this.mobileBend : this.desktopBend;
+  }
+  
   createRenderer() {
     this.renderer = new Renderer({
       alpha: true,
@@ -406,8 +434,14 @@ class App {
     const height = 2 * Math.tan(fov / 2) * this.camera.position.z;
     const width = height * this.camera.aspect;
     this.viewport = { width, height };
+    
+    // Update bend value based on device type
+    const newBend = this.getCurrentBend();
     if (this.medias) {
-      this.medias.forEach(media => media.onResize({ screen: this.screen, viewport: this.viewport }));
+      this.medias.forEach(media => {
+        media.updateBend(newBend);
+        media.onResize({ screen: this.screen, viewport: this.viewport });
+      });
     }
   }
   update() {
@@ -456,6 +490,7 @@ class App {
 export default function CircularGallery({
   items,
   bend = 3,
+  mobileBend = 1.5,
   textColor = '#ffffff',
   borderRadius = 0.05,
   font = 'bold 30px Figtree',
@@ -464,10 +499,19 @@ export default function CircularGallery({
 }) {
   const containerRef = useRef(null);
   useEffect(() => {
-    const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+    const app = new App(containerRef.current, { 
+      items, 
+      bend, 
+      mobileBend,
+      textColor, 
+      borderRadius, 
+      font, 
+      scrollSpeed, 
+      scrollEase 
+    });
     return () => {
       app.destroy();
     };
-  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+  }, [items, bend, mobileBend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
   return <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing" ref={containerRef} />;
 }
