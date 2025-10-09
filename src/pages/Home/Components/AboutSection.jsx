@@ -31,7 +31,7 @@ const AboutSection = () => {
                         <div className="relative rounded-3xl shadow-xl">
                             <TiltedCard
                                 imageSrc="https://fossetta.in/images/about/about.jpg"
-                                altText="Kendrick Lamar - GNX Album Cover"
+                                altText="Event Management"
                                 captionText="Event Management"
                                 containerHeight="500px"
                                 containerWidth="500px"
@@ -41,12 +41,7 @@ const AboutSection = () => {
                                 scaleOnHover={1.1}
                                 showMobileWarning={false}
                                 showTooltip={true}
-                                displayOverlayContent={true}
-                                // overlayContent={
-                                //     <p className="tilted-card-demo-text">
-                                //         Kendrick Lamar - GNX
-                                //     </p>
-                                // }
+                                displayOverlayContent={false}
                             />
                         </div>
                     </div>
