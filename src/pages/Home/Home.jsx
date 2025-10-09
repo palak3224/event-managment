@@ -1,20 +1,21 @@
-import React from 'react'
-import HeroSection from './Components/Hero'
-import FeaturedPortfolioTimeline from './Components/FeaturedPortfolioTimeline'
-import ServicesOverview from './Components/ServicesOverview'
 import Hero2 from './Components/Hero2'
 import CateringCarousel from './Components/CateringCarousel'
 import AboutSection from './Components/AboutSection'
+import ExclusiveSection from './Components/ExclusiveSection'
+import TestimonialsSection from './Components/TestimonialsSection'
+import ContactFormSection from './Components/ContactFormSection'
+import Footer from '@/component/Footer'
 
 function Home() {
   return (
     <div>
-      {/* <HeroSection /> */}
       <Hero2 />
       <CateringCarousel />
       <AboutSection />
-      {/* <ServicesOverview />
-      <FeaturedPortfolioTimeline /> */}
+      <ExclusiveSection />
+      <TestimonialsSection />
+      <ContactFormSection />
+      <Footer />
     </div>
   )
 }
