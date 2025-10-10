@@ -4,7 +4,6 @@ import AboutSection from './Components/AboutSection'
 import ExclusiveSection from './Components/ExclusiveSection'
 import TestimonialsSection from './Components/TestimonialsSection'
 import ContactFormSection from './Components/ContactFormSection'
-import Footer from '@/component/Footer'
 
 function Home() {
   return (
@@ -15,7 +14,6 @@ function Home() {
       <ExclusiveSection />
       <TestimonialsSection />
       <ContactFormSection />
-      <Footer />
     </div>
   )
 }

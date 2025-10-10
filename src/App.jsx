@@ -1,11 +1,14 @@
-import Home from "./pages/Home/Home"
+import { Outlet } from 'react-router-dom';
+import Footer from "./component/Footer"
+import PremiumNavbar from "./component/Navbar"
 
 
 const App = () => {
   return (
     <div>
-      {/* <Navbar /> */}
-      <Home />
+      <PremiumNavbar />
+      <Outlet />
+      <Footer />
     </div>
   )
 }
