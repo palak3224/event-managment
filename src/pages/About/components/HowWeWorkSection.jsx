@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HowWeWorkSection = () => {
   return (
@@ -34,28 +35,30 @@ const HowWeWorkSection = () => {
         >
           From intimate gatherings to grand celebrations, we orchestrate every detail with precision and elegance. Our curated approach transforms your vision into unforgettable moments.
         </p>
-        <button 
-          className="px-8 py-3 border-2 transition-all duration-300"
-          style={{
-            fontFamily: 'Texturina, serif',
-            fontSize: '16px',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            backgroundColor: '#2d1b4e',
-            color: '#d4af37',
-            borderColor: '#d4af37'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.backgroundColor = '#d4af37';
-            e.target.style.color = '#2d1b4e';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.backgroundColor = '#2d1b4e';
-            e.target.style.color = '#d4af37';
-          }}
-        >
-          Explore Our Services
-        </button>
+        <Link to="/services">
+          <button 
+            className="px-8 py-3 border-2 transition-all duration-300"
+            style={{
+              fontFamily: 'Texturina, serif',
+              fontSize: '16px',
+              fontWeight: 600,
+              letterSpacing: '1px',
+              backgroundColor: '#2d1b4e',
+              color: '#d4af37',
+              borderColor: '#d4af37'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#d4af37';
+              e.target.style.color = '#2d1b4e';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = '#2d1b4e';
+              e.target.style.color = '#d4af37';
+            }}
+          >
+            Explore Our Services
+          </button>
+        </Link>
       </div>
       <ShuffleGrid />
     </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, Send } from 'lucide-react';
 
@@ -133,15 +134,21 @@ const Footer = () => {
             >
               <h3 className="golden texturina text-2xl mb-6 font-light">Quick links</h3>
               <ul className="space-y-3">
-                {['HOME', 'WHAT MAKE US SPECIAL', 'OUR CLIENTS', 'PRIVACY POLICY', 'CONTACT US'].map((link, index) => (
+                {[
+                  { name: 'Home', to: '/' },
+                  { name: 'About', to: '/about' },
+                  { name: 'Services', to: '/services' },
+                  { name: 'Portfolio', to: '/portfolio' },
+                  { name: 'Contact', to: '/contact' },
+                ].map((link, index) => (
                   <li key={index}>
-                    <a
-                      href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                    <Link
+                      to={link.to}
                       className="text-white/70 hover:text-white hover:golden transition-colors text-sm flex items-center gap-2 group"
                     >
                       <span className="w-1.5 h-1.5 golden-bg rounded-full group-hover:w-3 transition-all" />
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

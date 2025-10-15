@@ -1,5 +1,6 @@
 import TiltedCard from '@/components/ui/TiltedCard';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
     return (
@@ -85,16 +86,18 @@ const AboutSection = () => {
                         </div>
 
                         <div className="pt-4">
-                            <button
-                                className="dark-purple text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity duration-300"
-                                style={{
-                                    fontFamily: 'Texturina, serif',
-                                    fontWeight: 500,
-                                    letterSpacing: '0.5px'
-                                }}
-                            >
-                                <span className="golden">READ MORE ABOUT US</span>
-                            </button>
+                            <Link to="/about">
+                                <button
+                                    className="dark-purple text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity duration-300"
+                                    style={{
+                                        fontFamily: 'Texturina, serif',
+                                        fontWeight: 500,
+                                        letterSpacing: '0.5px'
+                                    }}
+                                >
+                                    <span className="golden">READ MORE ABOUT US</span>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ const PremiumNavbar = () => {
     { name: 'Home', to: '/' },
     { name: 'About', to: '/about' },
     { name: 'Services', to: '/services' },
-    { name: 'Portfolio', to: '/#portfolio' }
+    { name: 'Portfolio', to: '/portfolio' }
   ];
 
   return (
@@ -104,7 +104,8 @@ const PremiumNavbar = () => {
 
             {/* Right - Book Now Button (Desktop) */}
             <div className="hidden lg:flex items-center">
-              <motion.button
+              <MotionLink
+                to="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="golden-bg rounded-full px-10 py-3.5 shadow-xl"
@@ -112,7 +113,7 @@ const PremiumNavbar = () => {
                 <span className="text-dark-purple text-base texturina font-semibold tracking-wide">
                   Book Now
                 </span>
-              </motion.button>
+              </MotionLink>
             </div>
 
             {/* Mobile Menu Button */}
@@ -151,7 +152,8 @@ const PremiumNavbar = () => {
                   </MotionLink>
                 ))}
                 
-                <motion.button
+                <MotionLink
+                  to="/contact"
                   whileTap={{ scale: 0.95 }}
                   className="golden-bg rounded-full px-6 py-3 shadow-xl mt-2"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -159,7 +161,7 @@ const PremiumNavbar = () => {
                   <span className="text-dark-purple text-base texturina font-semibold tracking-wide">
                     Book Now
                   </span>
-                </motion.button>
+                </MotionLink>
               </div>
             </motion.div>
           )}
