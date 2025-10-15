@@ -45,53 +45,33 @@ const servicesData = [
 
 export default function CoreServices() {
   const sectionRef = useRef(null);
-  const firstRowRef = useRef([]);
-  const secondRowRef = useRef([]);
+  const cardsRef = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // First row animation
-      firstRowRef.current.forEach((card, index) => {
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+        
         gsap.fromTo(
           card,
           {
-            y: 100 + (index * 60),
+            y: 80,
             opacity: 0,
+            scale: 0.9,
           },
           {
             y: 0,
             opacity: 1,
-            duration: 1.2,
-            ease: 'power3.out',
+            scale: 1,
+            duration: 0.8,
+            ease: 'power2.out',
             scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 70%',
-              end: 'center center',
-              scrub: 1.5,
+              trigger: card,
+              start: 'top 85%',
+              end: 'top 60%',
+              toggleActions: 'play none none reverse',
             },
-          }
-        );
-      });
-
-      // Second row animation
-      secondRowRef.current.forEach((card, index) => {
-        gsap.fromTo(
-          card,
-          {
-            y: 100 + (index * 60),
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.2,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 50%',
-              end: 'center center',
-              scrub: 1.5,
-            },
+            delay: (index % 3) * 0.15,
           }
         );
       });
@@ -124,11 +104,108 @@ export default function CoreServices() {
         .texturina {
           font-family: 'Texturina', serif;
         }
+
+        .service-card {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+          transition: left 0.6s ease;
+          z-index: 1;
+        }
+
+        .service-card:hover::before {
+          left: 100%;
+        }
+
+        .service-card::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 2px solid transparent;
+          transition: border-color 0.4s ease;
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .service-card:hover::after {
+          border-color: #d4af37;
+        }
+
+        .image-container {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .image-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, transparent 0%, rgba(45, 27, 78, 0.7) 100%);
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+
+        .service-card:hover .image-overlay {
+          opacity: 1;
+        }
+
+        .card-number {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          width: 50px;
+          height: 50px;
+          background: rgba(212, 175, 55, 0.95);
+          color: #2d1b4e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 1.25rem;
+          clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+          z-index: 3;
+          transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .card-number {
+          transform: scale(1.1) rotate(5deg);
+        }
+
+        .learn-more-btn {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .learn-more-btn::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: #d4af37;
+          transition: width 0.3s ease;
+        }
+
+        .service-card:hover .learn-more-btn::before {
+          width: 100%;
+        }
       `}</style>
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
+          <p className="text-sm uppercase tracking-[0.3em] golden font-semibold mb-4">
+            What We Offer
+          </p>
           <h2 className="text-5xl md:text-6xl font-bold text-dark-purple texturina mb-4">
             Our Core Services
           </h2>
@@ -138,81 +215,41 @@ export default function CoreServices() {
           </p>
         </div>
 
-        {/* First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {servicesData.slice(0, 3).map((service, index) => (
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {servicesData.map((service, index) => (
             <div
               key={service.id}
-              ref={(el) => (firstRowRef.current[index] = el)}
-              className="bg-gray-100 overflow-hidden transition-all duration-500 hover:shadow-2xl group"
+              ref={(el) => (cardsRef.current[index] = el)}
+              className="service-card bg-gray-50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(45,27,78,0.15)] group cursor-pointer"
             >
+              {/* Card Number */}
+              <div className="card-number texturina">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+
               {/* Image - 60% */}
-              <div className="h-64 overflow-hidden">
+              <div className="image-container h-64 relative">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="image-overlay"></div>
               </div>
 
               {/* Content - 40% */}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-dark-purple texturina mb-4">
+              <div className="p-8 relative z-10">
+                <h3 className="text-2xl font-bold text-dark-purple texturina mb-4 group-hover:golden transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                   {service.description}
                 </p>
-                <div className="mt-6 flex items-center golden cursor-pointer group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="font-semibold">Learn More</span>
+                <div className="learn-more-btn flex items-center golden font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                  <span>Learn More</span>
                   <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {servicesData.slice(3, 6).map((service, index) => (
-            <div
-              key={service.id}
-              ref={(el) => (secondRowRef.current[index] = el)}
-              className="bg-gray-100 overflow-hidden transition-all duration-500 hover:shadow-2xl group"
-            >
-              {/* Image - 60% */}
-              <div className="h-64 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-
-              {/* Content - 40% */}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-dark-purple texturina mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {service.description}
-                </p>
-                <div className="mt-6 flex items-center golden cursor-pointer group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="font-semibold">Learn More</span>
-                  <svg
-                    className="w-5 h-5 ml-2"
+                    className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

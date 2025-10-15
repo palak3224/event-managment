@@ -3,12 +3,12 @@ import ServiceHero from './components/ServiceHero'
 import ServicesMenu from './components/ServicesMenu'
 import CoreValuesSection from './components/CoreValuesSection'
 import CoreServices from './components/CoreServices'
+import ContactFormSection from '../Home/Components/ContactFormSection'
 
 const Services = () => {
   return (
     <div>
-        {/* <ServiceHero /> */}
-        <div className='h-screen'></div>
+        <ServiceHero />
 
         <ServicesMenu />
 
@@ -16,8 +16,7 @@ const Services = () => {
 
         <CoreServices />
 
-
-
+        <ContactFormSection />
     </div>
   )
 }
