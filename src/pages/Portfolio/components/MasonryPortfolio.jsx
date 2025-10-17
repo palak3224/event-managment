@@ -4,7 +4,7 @@ import Masonry from '@/components/ui/Masonry';
 const portfolioImages = [
   {
     id: "1",
-    img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+    img: "https://blissfulplans.com/wp-content/uploads/2023/12/big-fat-indian-weddings-1.jpg",
     url: "https://example.com",
     height: 800,
     category: "Wedding",
@@ -44,7 +44,7 @@ const portfolioImages = [
   },
   {
     id: "6",
-    img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80",
+    img: "https://www.shutterstock.com/image-photo/pushkar-rajasthan-india-november-06-600nw-2431623153.jpg",
     url: "https://example.com",
     height: 550,
     category: "Social",
@@ -52,7 +52,7 @@ const portfolioImages = [
   },
   {
     id: "7",
-    img: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+    img: "https://thumbs.dreamstime.com/b/people-take-part-national-convention-%E2%80%98empowerment-women-social-transformation-headquarters-brahma-166081264.jpg",
     url: "https://example.com",
     height: 650,
     category: "Social",
@@ -68,7 +68,7 @@ const portfolioImages = [
   },
   {
     id: "9",
-    img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+    img: "https://d397bfy4gvgcdm.cloudfront.net/424199-AVW-1695.jpeg",
     url: "https://example.com",
     height: 600,
     category: "Wedding",
@@ -76,7 +76,7 @@ const portfolioImages = [
   },
   {
     id: "10",
-    img: "https://images.unsplash.com/photo-1478147427282-58a87a120781?w=800&q=80",
+    img: "https://www.captainjoe.in/blog/images/house-party-in-gurgaon-instagram-worthy-catering.jpg",
     url: "https://example.com",
     height: 850,
     category: "Social",
@@ -84,7 +84,7 @@ const portfolioImages = [
   },
   {
     id: "11",
-    img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyeHKfJnOL-d61u6AsRILv8oLBfcLFsOyDTYtC-ucvXCoPHzbtS8sjgAwWzi9kOsTnwJQ&usqp=CAU",
     url: "https://example.com",
     height: 500,
     category: "Corporate",
@@ -101,7 +101,7 @@ const portfolioImages = [
   },
   {
     id: "14",
-    img: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80",
+    img: "https://d397bfy4gvgcdm.cloudfront.net/146012-Sharanya-Terry-Wedding-1167.jpeg",
     url: "https://example.com",
     height: 700,
     category: "Wedding",
@@ -109,7 +109,7 @@ const portfolioImages = [
   },
   {
     id: "15",
-    img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
+    img: "https://1upevents.in/wp-content/uploads/2019/04/corporate-events-pune.jpg",
     url: "https://example.com",
     height: 550,
     category: "Corporate",
@@ -133,7 +133,7 @@ const portfolioImages = [
   },
   {
     id: "18",
-    img: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80",
+    img: "https://static8.depositphotos.com/1009307/1039/i/450/depositphotos_10395278-stock-photo-decorated-ballroom-for-indian-weding.jpg",
     url: "https://example.com",
     height: 750,
     category: "Wedding",
@@ -149,7 +149,7 @@ const portfolioImages = [
   },
   {
     id: "20",
-    img: "https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?w=800&q=80",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_8eZYDeRpNHeeAdLukfZxHC5T9s9DVIphZQ&s",
     url: "https://example.com",
     height: 500,
     category: "Corporate",
@@ -165,7 +165,7 @@ const portfolioImages = [
   },
   {
     id: "22",
-    img: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80",
+    img: "https://i.pinimg.com/736x/98/5f/9b/985f9b27b6e55fa4ba5dcf6c6a6e5fbd.jpg",
     url: "https://example.com",
     height: 650,
     category: "Exhibition",
@@ -173,7 +173,7 @@ const portfolioImages = [
   },
   {
     id: "23",
-    img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+    img: "https://cdn0.hitched.co.uk/vendor/0147/3_2/960/jpg/indian-sikh-wedding-photographer-london-15_4_370147-173014610390129.jpeg",
     url: "https://example.com",
     height: 700,
     category: "Wedding",
@@ -181,7 +181,7 @@ const portfolioImages = [
   },
   {
     id: "24",
-    img: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80",
+    img: "https://i.pinimg.com/736x/33/93/c8/3393c868687d71bd902a424d490413ed.jpg",
     url: "https://example.com",
     height: 550,
     category: "Entertainment",
