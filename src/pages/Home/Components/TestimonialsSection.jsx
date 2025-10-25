@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
       name: "Sarah Anderson",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
       rating: 5,
-      review: "I've attended countless events, but the food at this one—catered by Fossetta—was something else. Every dish was bursting with flavor, and the presentation? Absolutely top-class. Hats off to the team for creating such a memorable experience.",
+      review: "I've attended countless events, but the food at this one—catered by Khao Khilao Sone Do—was something else. Every dish was bursting with flavor, and the presentation? Absolutely top-class. Hats off to the team for creating such a memorable experience.",
       company: "CEO, Anderson Enterprises"
     },
     {
@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
       name: "Michael Chen",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
       rating: 5,
-      review: "Fossetta brought a level of culinary elegance that perfectly complemented our luxury showcase. Their attention to detail and gourmet execution left our guests truly impressed. The service was impeccable from start to finish.",
+      review: "Khao Khilao Sone Do brought a level of culinary elegance that perfectly complemented our luxury showcase. Their attention to detail and gourmet execution left our guests truly impressed. The service was impeccable from start to finish.",
       company: "Director, Chen Global"
     },
     {

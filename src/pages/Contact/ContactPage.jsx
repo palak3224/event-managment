@@ -37,7 +37,7 @@ const ContactPage = () => {
     {
       icon: <Mail size={28} />,
       title: "Email",
-      content: "events@fossetta.com",
+      content: "events@khaoKhilaosonedo.com",
       subContent: "We reply within 24 hours"
     },
     {
@@ -316,7 +316,7 @@ const ContactPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-dark-purple texturina mb-4">
-              Why Choose Fossetta?
+              Why Choose Khao Khilao Sone Do?
             </h2>
             <div className="w-24 h-1 golden-bg mx-auto"></div>
           </div>

@@ -69,20 +69,21 @@ const PremiumNavbar = () => {
           isScrolled ? 'dark-purple shadow-lg' : 'bg-transparent'
         }`}
       >
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-5">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto">
+          <div className="flex items-center px-2 justify-between">
             {/* Left - Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="golden-bg px-4 py-1.5 rounded-md shadow-lg cursor-pointer"
+              className="rounded-md cursor-pointer"
             >
-              <span 
-                className="text-dark-purple text-2xl md:text-3xl font-bold tangerine"
-                style={{ fontWeight: 700 }}
-              >
-                KKH
-              </span>
+              <Link to="/">
+                <img
+                  src="/logo.png"
+                  alt="KKH Logo"
+                  className="h-20 md:h-24 w-auto object-fit"
+                />
+              </Link>
             </motion.div>
 
             {/* Middle - Navigation Links (Desktop) */}
