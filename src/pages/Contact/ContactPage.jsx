@@ -57,10 +57,10 @@ const ContactPage = () => {
   return (
     <div className="w-full bg-[#FAF8F5]">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         .contact-card {
@@ -84,7 +84,7 @@ const ContactPage = () => {
           <p className="text-sm uppercase tracking-[0.3em] text-[#FFF0E5] font-semibold mb-4">
             Get In Touch
           </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFF0E5] texturina mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFF0E5] . mb-6">
             Let's Create Magic Together
           </h1>
           <div className="w-24 h-1 bg-[#FFF0E5] mx-auto mb-6"></div>
@@ -108,7 +108,7 @@ const ContactPage = () => {
                     {info.icon}
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-[#3E2723] texturina mb-2">
+                <h3 className="text-lg font-semibold text-[#3E2723] . mb-2">
                   {info.title}
                 </h3>
                 <p className="text-[#9D5C63] font-semibold mb-1">
@@ -136,7 +136,7 @@ const ContactPage = () => {
                 className="order-2 lg:order-1"
               >
                 <div className="mb-8">
-                  <h3 className="texturina text-[#9D5C63] text-lg md:text-xl italic mb-2">
+                  <h3 className=". text-[#9D5C63] text-lg md:text-xl italic mb-2">
                     Get In Touch
                   </h3>
                   <h2 className="text-3xl md:text-4xl font-normal text-[#3E2723] mb-3">
@@ -299,7 +299,7 @@ const ContactPage = () => {
       <section className="py-20 px-6 bg-[#FAF8F5]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] texturina mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] . mb-4">
               Why Choose Khao Khilao Sone Do?
             </h2>
             <div className="w-24 h-1 bg-[#9D5C63] mx-auto"></div>
@@ -310,7 +310,7 @@ const ContactPage = () => {
               <div className="w-16 h-16 rounded-full bg-[#9D5C63] flex items-center justify-center mx-auto mb-4">
                 <div className="w-8 h-8 rounded-full bg-[#FFF0E5]"></div>
               </div>
-              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 texturina">
+              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 .">
                 15+ Years Experience
               </h3>
               <p className="text-[#3E2723]/80">
@@ -322,7 +322,7 @@ const ContactPage = () => {
               <div className="w-16 h-16 rounded-full bg-[#9D5C63] flex items-center justify-center mx-auto mb-4">
                 <div className="w-8 h-8 rounded-full bg-[#FFF0E5]"></div>
               </div>
-              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 texturina">
+              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 .">
                 500+ Events Delivered
               </h3>
               <p className="text-[#3E2723]/80">
@@ -334,7 +334,7 @@ const ContactPage = () => {
               <div className="w-16 h-16 rounded-full bg-[#9D5C63] flex items-center justify-center mx-auto mb-4">
                 <div className="w-8 h-8 rounded-full bg-[#FFF0E5]"></div>
               </div>
-              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 texturina">
+              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 .">
                 24/7 Support
               </h3>
               <p className="text-[#3E2723]/80">
@@ -348,7 +348,7 @@ const ContactPage = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-[#FFF0E5]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] texturina mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] . mb-6">
             Ready to Start Planning?
           </h2>
           <p className="text-xl text-[#3E2723]/80 mb-8">

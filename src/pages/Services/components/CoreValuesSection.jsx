@@ -75,15 +75,15 @@ const CoreValuesSection = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
       `}</style>
-      <div className="py-36 flex items-center justify-center p-8 bg-[#9D5C63]" style={{ fontFamily: 'Texturina, serif' }}>
+      <div className="py-36 flex items-center justify-center p-8 bg-[#9D5C63]" style={{ fontFamily: '., serif' }}>
         <div className="max-w-7xl w-full">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4 text-[#FFF0E5]" style={{ fontFamily: 'Texturina, serif' }}>
+            <h2 className="text-5xl font-bold mb-4 text-[#FFF0E5]" style={{ fontFamily: '., serif' }}>
               Our Core Values
             </h2>
-            <p className="text-xl text-[#FFF0E5]/80 max-w-2xl mx-auto" style={{ fontFamily: 'Texturina, serif' }}>
+            <p className="text-xl text-[#FFF0E5]/80 max-w-2xl mx-auto" style={{ fontFamily: '., serif' }}>
               The principles that guide us in creating extraordinary events
             </p>
           </div>
@@ -101,10 +101,10 @@ const CoreValuesSection = () => {
                       <value.icon className="w-10 h-10 text-[#FFF0E5]" strokeWidth={2} />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-center text-[#3E2723]" style={{ fontFamily: 'Texturina, serif' }}>
+                  <h3 className="text-2xl font-bold mb-4 text-center text-[#3E2723]" style={{ fontFamily: '., serif' }}>
                     {value.title}
                   </h3>
-                  <p className="text-base leading-relaxed text-center text-[#3E2723]/80" style={{ fontFamily: 'Texturina, serif' }}>
+                  <p className="text-base leading-relaxed text-center text-[#3E2723]/80" style={{ fontFamily: '., serif' }}>
                     {value.description}
                   </p>
                 </div>

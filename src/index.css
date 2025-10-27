@@ -115,5 +115,30 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Old Standard TT', serif; 
   }
+}
+
+@font-face {
+  font-family: 'Le Jour Serif';
+  src: url('/le-jour-serif/1469Le-Jour-Serif.woff2') format('truetype');
+}
+
+h1, h2, h3{ 
+  font-family: 'Le Jour Serif', serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
 }

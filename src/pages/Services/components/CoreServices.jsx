@@ -83,10 +83,10 @@ export default function CoreServices() {
   return (
     <section ref={sectionRef} className="w-full min-h-screen bg-[#FAF8F5] py-24 px-6">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         .service-card {
@@ -190,7 +190,7 @@ export default function CoreServices() {
           <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             What We Offer
           </p>
-          <h2 className="text-5xl md:text-6xl font-bold text-[#3E2723] texturina mb-4">
+          <h2 className="text-5xl md:text-6xl font-bold text-[#3E2723] . mb-4">
             Our Core Services
           </h2>
           <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>
@@ -208,7 +208,7 @@ export default function CoreServices() {
               className="service-card bg-[#FFF0E5] transition-all duration-500 hover:shadow-[0_20px_50px_rgba(157,92,99,0.15)] group cursor-pointer"
             >
               {/* Card Number */}
-              <div className="card-number texturina">
+              <div className="card-number .">
                 {String(index + 1).padStart(2, '0')}
               </div>
 
@@ -224,7 +224,7 @@ export default function CoreServices() {
 
               {/* Content - 40% */}
               <div className="p-8 relative z-10">
-                <h3 className="text-2xl font-bold text-[#3E2723] texturina mb-4 group-hover:text-[#9D5C63] transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-[#3E2723] . mb-4 group-hover:text-[#9D5C63] transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-[#3E2723]/80 leading-relaxed mb-6 text-sm">

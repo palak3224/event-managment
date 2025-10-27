@@ -64,7 +64,7 @@ const CateringCarousel = () => {
   return (
     <div className="w-full bg-[#FAF8F5] py-2 md:py-6 px-2 md:px-6">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
         .primary-mauve-bg {
           background-color: #9D5C63;
@@ -92,12 +92,12 @@ const CateringCarousel = () => {
             <h1 
             className="text-4xl md:text-5xl lg:text-5xl text-center mb-6 md:mb-8 px-4 text-espresso"
             style={{ 
-                fontFamily: 'Texturina, serif',
-                fontWeight: 600,
-                fontStyle: 'italic'
+                // fontFamily: '., serif',
+                // fontWeight: 600,
+                // fontStyle: 'italic'
             }}
             >
-            Elevate your occasion with exquisite catering.
+            Elevate your occasion with exquisite catering
             </h1>
             
             <div className="flex justify-center mb-12 md:mb-16">
@@ -107,8 +107,8 @@ const CateringCarousel = () => {
                 <p 
                 className="accent-cream-text text-sm md:text-base tracking-wide"
                 style={{ 
-                    fontFamily: 'Texturina, serif',
-                    fontWeight: 500
+                    // fontFamily: '., serif',
+                    // fontWeight: 500
                 }}
                 >
                 Our Signature Services
@@ -151,7 +151,7 @@ const CateringCarousel = () => {
                     <h3 
                         className="accent-cream-text text-2xl md:text-3xl mb-3 text-center"
                         style={{ 
-                        fontFamily: 'Texturina, serif',
+                        // fontFamily: '., serif',
                         fontWeight: 600
                         }}
                     >
@@ -160,7 +160,7 @@ const CateringCarousel = () => {
                     <p 
                         className="accent-cream-text text-sm md:text-base tracking-wide text-center opacity-90"
                         style={{ 
-                        fontFamily: 'Texturina, serif',
+                        // fontFamily: '., serif',
                         fontWeight: 400
                         }}
                     >

@@ -81,10 +81,10 @@ const CounterStats = () => {
   return (
     <section ref={sectionRef} className="relative w-full bg-[#FAF8F5] py-20 px-6 overflow-hidden">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         .counter-card {
@@ -150,7 +150,7 @@ const CounterStats = () => {
           <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             Our Achievements
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3E2723] texturina mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3E2723] . mb-4">
             Success in Numbers
           </h2>
           <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>
@@ -172,7 +172,7 @@ const CounterStats = () => {
               </div>
 
               {/* Counter Number */}
-              <div className="counter-number texturina mb-2">
+              <div className="counter-number . mb-2">
                 {counts[index]}
                 <span className="text-[#9D5C63]">{stat.suffix}</span>
               </div>

@@ -143,10 +143,10 @@ export default function ServicesHero() {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-[#FAF8F5]">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         .thumbnail-active {
@@ -202,10 +202,10 @@ export default function ServicesHero() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6">
-        <h1 className="text-6xl md:text-8xl font-bold text-[#3E2723] texturina mb-4 text-center">
+        <h1 className="text-6xl md:text-8xl font-bold text-[#3E2723] . mb-4 text-center">
           {heroImages[activeIndex].title}
         </h1>
-        <p className="text-2xl md:text-3xl text-[#9D5C63] texturina text-center">
+        <p className="text-2xl md:text-3xl text-[#9D5C63] . text-center">
           {heroImages[activeIndex].subtitle}
         </p>
       </div>

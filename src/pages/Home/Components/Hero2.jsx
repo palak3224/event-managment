@@ -35,6 +35,13 @@ let showItems = [
 const Hero2 = () => {
   return (
     <div className="relative h-screen overflow-hidden bg-transparent border-b-2 border-[#9D5C63]">
+
+    <style>{`
+            .text-espresso {
+                  color: #3E2723;
+                }
+    `}</style>
+
       {/* Background Light Rays */}
       <div className="absolute inset-0 z-0">
         <LightRays
@@ -54,12 +61,12 @@ const Hero2 = () => {
       {/* Heading */}
       <div className="absolute top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <h1
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#3E2723] text-center"
+          className="text-espresso text-5xl md:text-6xl lg:text-7xl font-bold text-[#3E2723] text-center"
           style={{
-            fontFamily: '"Texturina", serif',
-            fontOpticalSizing: 'auto',
-            fontWeight: 700,
-            fontStyle: 'normal',
+            // fontFamily: '".", serif',
+            // fontOpticalSizing: 'auto',
+            // fontWeight: 700,
+            // fontStyle: 'normal',
           }}
         >
           Making Your Moments Memorable
@@ -82,7 +89,7 @@ const Hero2 = () => {
 
       {/* Font import */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
       `}</style>
     </div>
   )

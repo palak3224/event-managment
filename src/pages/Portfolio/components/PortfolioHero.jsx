@@ -38,10 +38,10 @@ const PortfolioHero = () => {
   return (
     <section className="relative w-full bg-[#FAF8F5] overflow-hidden">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         .portfolio-card-bg {
@@ -87,7 +87,7 @@ const PortfolioHero = () => {
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-3xl sm:text-4xl font-bold text-[#3E2723] texturina leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#3E2723] . leading-tight">
               Transforming Visions Into
               <span className="text-[#9D5C63] block mt-2">Memorable Events</span>
             </h1>
@@ -124,7 +124,7 @@ const PortfolioHero = () => {
 
                     {/* Bottom Info */}
                     <div className="space-y-2">
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#FFF0E5] texturina leading-tight">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#FFF0E5] . leading-tight">
                         {project.title}
                       </h3>
                       <p className="text-[#FFF0E5]/90 text-lg font-semibold">
@@ -174,11 +174,11 @@ const PortfolioHero = () => {
         {/* Stats Grid - Mobile */}
         <div className="grid grid-cols-2 gap-4 mt-12">
           <div className="text-center p-4 bg-[#FFF0E5] rounded-lg">
-            <div className="text-3xl font-bold text-[#9D5C63] texturina">500+</div>
+            <div className="text-3xl font-bold text-[#9D5C63] .">500+</div>
             <p className="text-sm text-[#3E2723]/80 mt-1">Events</p>
           </div>
           <div className="text-center p-4 bg-[#FFF0E5] rounded-lg">
-            <div className="text-3xl font-bold text-[#9D5C63] texturina">50K+</div>
+            <div className="text-3xl font-bold text-[#9D5C63] .">50K+</div>
             <p className="text-sm text-[#3E2723]/80 mt-1">Attendees</p>
           </div>
         </div>
@@ -197,7 +197,7 @@ const PortfolioHero = () => {
               </div>
 
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#3E2723] texturina leading-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#3E2723] . leading-tight">
                   Transforming Visions Into
                   <span className="text-[#9D5C63] block mt-2">Memorable Events</span>
                 </h1>
@@ -224,7 +224,7 @@ const PortfolioHero = () => {
                         </span>
                       </div>
                       <div>
-                        <h3 className="text-3xl font-bold text-[#FFF0E5] texturina mb-2">{project.title}</h3>
+                        <h3 className="text-3xl font-bold text-[#FFF0E5] . mb-2">{project.title}</h3>
                         <p className="text-[#FFF0E5]/90">{project.guests}</p>
                       </div>
                     </div>

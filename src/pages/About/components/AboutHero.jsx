@@ -52,10 +52,10 @@ const AboutHero = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         @keyframes scroll {
@@ -104,7 +104,7 @@ const AboutHero = () => {
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-[#3E2723] pointer-events-none px-4">
-            <h1 className="texturina text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 text-[#9D5C63]">
+            <h1 className=". text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 text-[#9D5C63]">
               About Our Story
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-center max-w-2xl text-[#3E2723]/90 leading-relaxed">
@@ -114,7 +114,7 @@ const AboutHero = () => {
             {/* Scroll Indicator */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
               <div className="flex flex-col items-center gap-2">
-                <p className="text-sm md:text-base text-[#3E2723]/90 texturina font-light tracking-wider">
+                <p className="text-sm md:text-base text-[#3E2723]/90 . font-light tracking-wider">
                   Scroll to explore
                 </p>
                 <div className="w-6 h-10 border-2 border-[#3E2723]/50 rounded-full flex items-start justify-center p-2">

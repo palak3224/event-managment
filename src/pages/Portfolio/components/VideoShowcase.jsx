@@ -88,10 +88,10 @@ const VideoShowcase = () => {
   return (
     <section className="relative w-full bg-[#FAF8F5] py-20 px-6">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:wght@400;700&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         .video-container {
@@ -157,7 +157,7 @@ const VideoShowcase = () => {
           <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             Watch Our Work
           </p>
-          <h2 className="text-5xl font-bold text-[#3E2723] texturina mb-4">
+          <h2 className="text-5xl font-bold text-[#3E2723] . mb-4">
             Video Showcase
           </h2>
           <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>

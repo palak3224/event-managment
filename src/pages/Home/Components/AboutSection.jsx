@@ -6,7 +6,7 @@ const AboutSection = () => {
     return (
         <div className="w-full bg-[#FAF8F5] py-16 md:py-24 px-4 md:px-8">
             <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
                 
                 .primary-mauve-bg {
                   background-color: #9D5C63;
@@ -56,9 +56,9 @@ const AboutSection = () => {
                         <h2
                             className="text-espresso text-3xl md:text-4xl lg:text-5xl mb-2"
                             style={{
-                                fontFamily: 'Texturina, serif',
-                                fontWeight: 600,
-                                fontStyle: 'italic'
+                                // fontFamily: '., serif',
+                                // fontWeight: 600,
+                                // fontStyle: 'italic'
                             }}
                         >
                             Experience The Sublime!
@@ -67,16 +67,16 @@ const AboutSection = () => {
                         <h3
                             className="text-espresso text-2xl md:text-3xl lg:text-4xl mb-6"
                             style={{
-                                fontFamily: 'Texturina, serif',
-                                fontWeight: 600
+                                // fontFamily: '., serif',
+                                // fontWeight: 600
                             }}
                         >
-                            The Perfect Choice for Your Next Event.
+                            The Perfect Choice for Your Next Event
                         </h3>
 
                         <div className="space-y-4 text-[#3E2723] leading-relaxed">
                             <p className="text-base md:text-md">
-                                <span className="primary-mauve-text text-5xl md:text-6xl float-left mr-3 leading-none" style={{ fontFamily: 'Texturina, serif', fontWeight: 700 }}>F</span>
+                                <span className="primary-mauve-text text-5xl md:text-6xl float-left mr-3 leading-none" >F</span>
                                 osetta Gourmet Catering guarantee outstanding food presentation, creative cuisines, and a wide range of service styles. With over 40 years of industry experience, Fosetta Gourmet Catering is one of the leading catering services in Delhi and Gurgaon. The company is known for its expertise in wedding catering, corporate events, destination weddings, and private luxury events.
                             </p>
 
@@ -94,8 +94,8 @@ const AboutSection = () => {
                                 <button
                                     className="primary-mauve-bg accent-cream-text px-8 py-3 rounded-lg hover-deep-mauve-bg transition-colors duration-300"
                                     style={{
-                                        fontFamily: 'Texturina, serif',
-                                        fontWeight: 500,
+                                        // fontFamily: '., serif',
+                                        // fontWeight: 500,
                                         letterSpacing: '0.5px'
                                     }}
                                 >

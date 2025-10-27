@@ -8,7 +8,7 @@ const EventPortfolioSection = () => {
   const portfolios = [
     {
       id: 0,
-      title: 'CORPORATE SUMMIT 2024',
+      title: 'CORPORATE SUMMIT',
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
       description: 'A prestigious three-day corporate summit featuring keynote speakers, networking sessions, and innovative workshops. Hosted 500+ executives from leading global companies in an atmosphere of sophistication and excellence.',
       location: 'Grand Ballroom, Mumbai',
@@ -67,11 +67,7 @@ const EventPortfolioSection = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
-        
-        .texturina {
-          font-family: 'Texturina', serif;
-        }
+
       `}</style>
 
       <div className="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden bg-[#FAF8F5]">
@@ -106,7 +102,7 @@ const EventPortfolioSection = () => {
               className="flex items-start gap-3 md:gap-4"
             >
               <div className="w-8 md:w-12 lg:w-16 h-[1px] bg-[#3E2723] mt-4 md:mt-6" />
-              <h1 className="texturina text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-[#3E2723] leading-tight">
+              <h1 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-[#3E2723] leading-tight">
                 EXCLUSIVELY<br />FOR YOU
               </h1>
             </motion.div>
@@ -160,7 +156,7 @@ const EventPortfolioSection = () => {
                       transition={{ duration: 0.5 }}
                       className="text-center"
                     >
-                      <span className="texturina text-[#3E2723]/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
+                      <span className=". text-[#3E2723]/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
                         {portfolios[getPrevIndex()].title.split(' ').map((word, i) => (
                           <span key={i} className="block mb-1">{word}</span>
                         ))}
@@ -192,7 +188,7 @@ const EventPortfolioSection = () => {
 
                     {/* Card Content */}
                     <div className="p-4 sm:p-6 md:p-8 lg:p-10 text-center bg-[#FFF0E5]">
-                      <h2 className="texturina text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-[#3E2723] mb-2 md:mb-3 tracking-wider">
+                      <h2 className=". text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-[#3E2723] mb-2 md:mb-3 tracking-wider">
                         {portfolios[currentSlide].title}
                       </h2>
                       
@@ -254,7 +250,7 @@ const EventPortfolioSection = () => {
                       transition={{ duration: 0.5 }}
                       className="text-center"
                     >
-                      <span className="texturina text-[#3E2723]/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
+                      <span className=". text-[#3E2723]/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
                         {portfolios[getNextIndex()].title.split(' ').map((word, i) => (
                           <span key={i} className="block mb-1">{word}</span>
                         ))}

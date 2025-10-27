@@ -61,10 +61,10 @@ const WelcomeAbout = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
       `}</style>
 
@@ -75,12 +75,12 @@ const WelcomeAbout = () => {
         <div className="max-w-[1400px] mx-auto">
           {/* Heading Section */}
           <div className="text-center mb-12 md:mb-16">
-            <h1 className="texturina text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#9D5C63] mb-4 md:mb-6 leading-tight">
+            <h1 className=". text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#9D5C63] mb-4 md:mb-6 leading-tight">
               Welcome
               <br />
               to Khao Khilao Sonedo
             </h1>
-            <p className="texturina text-lg sm:text-xl md:text-2xl text-[#9D5C63] italic font-light max-w-4xl mx-auto px-4">
+            <p className=". text-lg sm:text-xl md:text-2xl text-[#9D5C63] italic font-light max-w-4xl mx-auto px-4">
               "Where celebrations meet culinary excellence in the heart of unforgettable moments"
             </p>
           </div>
@@ -113,7 +113,7 @@ const WelcomeAbout = () => {
                 </p>
 
                 <button className="group inline-flex items-center gap-3 text-[#3E2723] hover:text-[#7A3E46] transition-colors w-fit">
-                  <span className="texturina text-base md:text-lg italic">
+                  <span className=". text-base md:text-lg italic">
                     Discover the Events
                   </span>
                   <ArrowRight className="w-5 h-5 text-[#9D5C63] group-hover:translate-x-2 transition-transform duration-300" />
