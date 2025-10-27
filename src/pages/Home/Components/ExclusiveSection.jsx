@@ -74,8 +74,8 @@ const EventPortfolioSection = () => {
         }
       `}</style>
 
-      <div className="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden bg-black">
-        {/* Background Image with Overlay */}
+      <div className="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden bg-[#FAF8F5]">
+        {/* Background Image */}
         <AnimatePresence mode="wait">
           <motion.div
             key={portfolios[currentSlide].image}
@@ -90,7 +90,7 @@ const EventPortfolioSection = () => {
               alt="Background"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black/50" />
+            <div className="absolute inset-0 bg-white/50" />
           </motion.div>
         </AnimatePresence>
 
@@ -105,8 +105,8 @@ const EventPortfolioSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex items-start gap-3 md:gap-4"
             >
-              <div className="w-8 md:w-12 lg:w-16 h-[1px] bg-white mt-4 md:mt-6" />
-              <h1 className="texturina text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight">
+              <div className="w-8 md:w-12 lg:w-16 h-[1px] bg-[#3E2723] mt-4 md:mt-6" />
+              <h1 className="texturina text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-[#3E2723] leading-tight">
                 EXCLUSIVELY<br />FOR YOU
               </h1>
             </motion.div>
@@ -116,7 +116,7 @@ const EventPortfolioSection = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-white/90 text-xs sm:text-sm md:text-base max-w-md leading-relaxed"
+              className="text-[#3E2723]/90 text-xs sm:text-sm md:text-base max-w-md leading-relaxed"
             >
               Crafting unforgettable experiences through meticulous planning and flawless execution. Each event is a masterpiece of creativity, elegance, and attention to detail.
             </motion.p>
@@ -128,25 +128,25 @@ const EventPortfolioSection = () => {
               {/* Left Navigation Panel - Desktop Only */}
               <div className="hidden lg:flex w-60 items-center justify-center relative">
                 {/* Borders */}
-                <div className="absolute right-0 top-0 h-full w-[1px] bg-white" />
+                <div className="absolute right-0 top-0 h-full w-[1px] bg-[#9D5C63]" />
                 <div className="absolute right-0 top-0 w-full h-[1px]" 
                      style={{
-                       background: 'linear-gradient(to right, transparent, white)'
+                       background: 'linear-gradient(to right, transparent, #9D5C63)'
                      }} 
                 />
                 <div className="absolute right-0 bottom-0 w-full h-[1px]" 
                      style={{
-                       background: 'linear-gradient(to right, transparent, white)'
+                       background: 'linear-gradient(to right, transparent, #9D5C63)'
                      }} 
                 />
 
                 {/* Content */}
                 <div className="flex flex-col items-center justify-center gap-8 px-6">
                   <motion.button
-                    whileHover={{ scale: 1.08 }}
+                    whileHover={{ scale: 1.08, backgroundColor: '#7A3E46' }}
                     whileTap={{ scale: 0.92 }}
                     onClick={prevSlide}
-                    className="w-16 h-16 rounded-full backdrop-blur-md bg-white/10 border border-white/40 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 shadow-xl"
+                    className="w-16 h-16 rounded-full bg-[#9D5C63] border border-[#9D5C63] flex items-center justify-center text-[#FFF0E5] transition-all duration-300 shadow-xl"
                   >
                     <ChevronLeft size={26} strokeWidth={1.5} />
                   </motion.button>
@@ -160,7 +160,7 @@ const EventPortfolioSection = () => {
                       transition={{ duration: 0.5 }}
                       className="text-center"
                     >
-                      <span className="texturina text-white/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
+                      <span className="texturina text-[#3E2723]/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
                         {portfolios[getPrevIndex()].title.split(' ').map((word, i) => (
                           <span key={i} className="block mb-1">{word}</span>
                         ))}
@@ -180,7 +180,7 @@ const EventPortfolioSection = () => {
                   transition={{ duration: 0.7, ease: "easeOut" }}
                   className="flex-1 max-w-4xl mx-2 sm:mx-4 lg:mx-8"
                 >
-                  <div className="bg-white overflow-hidden h-full flex flex-col shadow-2xl rounded-lg md:rounded-none">
+                  <div className="bg-[#FFF0E5] overflow-hidden h-full flex flex-col shadow-2xl rounded-lg md:rounded-none">
                     {/* Card Image */}
                     <div className="relative flex-1 overflow-hidden min-h-[250px] sm:min-h-[300px] md:min-h-[350px]">
                       <img
@@ -191,25 +191,25 @@ const EventPortfolioSection = () => {
                     </div>
 
                     {/* Card Content */}
-                    <div className="p-4 sm:p-6 md:p-8 lg:p-10 text-center bg-white">
-                      <h2 className="texturina text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-900 mb-2 md:mb-3 tracking-wider">
+                    <div className="p-4 sm:p-6 md:p-8 lg:p-10 text-center bg-[#FFF0E5]">
+                      <h2 className="texturina text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-[#3E2723] mb-2 md:mb-3 tracking-wider">
                         {portfolios[currentSlide].title}
                       </h2>
                       
-                      <div className="flex items-center justify-center flex-wrap gap-2 md:gap-4 mb-3 md:mb-4 text-xs text-gray-500">
+                      <div className="flex items-center justify-center flex-wrap gap-2 md:gap-4 mb-3 md:mb-4 text-xs text-[#3E2723]/70">
                         <span className="text-center">{portfolios[currentSlide].location}</span>
-                        <span className="w-1 h-1 rounded-full bg-gray-400" />
+                        <span className="w-1 h-1 rounded-full bg-[#3E2723]/50" />
                         <span>{portfolios[currentSlide].attendees}</span>
                       </div>
 
-                      <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed mb-4 md:mb-6 max-w-2xl mx-auto">
+                      <p className="text-[#3E2723] text-xs sm:text-sm md:text-base leading-relaxed mb-4 md:mb-6 max-w-2xl mx-auto">
                         {portfolios[currentSlide].description}
                       </p>
                       
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.05, color: '#7A3E46' }}
                         whileTap={{ scale: 0.95 }}
-                        className="text-amber-600 font-medium text-xs sm:text-sm tracking-wider hover:text-amber-700 transition-colors inline-flex items-center gap-2"
+                        className="text-[#9D5C63] font-medium text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center gap-2"
                       >
                         VIEW DETAILS
                         <span className="text-base sm:text-lg">›</span>
@@ -222,25 +222,25 @@ const EventPortfolioSection = () => {
               {/* Right Navigation Panel - Desktop Only */}
               <div className="hidden lg:flex w-60 items-center justify-center relative">
                 {/* Borders */}
-                <div className="absolute left-0 top-0 h-full w-[1px] bg-white" />
+                <div className="absolute left-0 top-0 h-full w-[1px] bg-[#9D5C63]" />
                 <div className="absolute left-0 top-0 w-full h-[1px]" 
                      style={{
-                       background: 'linear-gradient(to left, transparent, white)'
+                       background: 'linear-gradient(to left, transparent, #9D5C63)'
                      }} 
                 />
                 <div className="absolute left-0 bottom-0 w-full h-[1px]" 
                      style={{
-                       background: 'linear-gradient(to left, transparent, white)'
+                       background: 'linear-gradient(to left, transparent, #9D5C63)'
                      }} 
                 />
 
                 {/* Content */}
                 <div className="flex flex-col items-center justify-center gap-8 px-6">
                   <motion.button
-                    whileHover={{ scale: 1.08 }}
+                    whileHover={{ scale: 1.08, backgroundColor: '#7A3E46' }}
                     whileTap={{ scale: 0.92 }}
                     onClick={nextSlide}
-                    className="w-16 h-16 rounded-full backdrop-blur-md bg-white/10 border border-white/40 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 shadow-xl"
+                    className="w-16 h-16 rounded-full bg-[#9D5C63] border border-[#9D5C63] flex items-center justify-center text-[#FFF0E5] transition-all duration-300 shadow-xl"
                   >
                     <ChevronRight size={26} strokeWidth={1.5} />
                   </motion.button>
@@ -254,7 +254,7 @@ const EventPortfolioSection = () => {
                       transition={{ duration: 0.5 }}
                       className="text-center"
                     >
-                      <span className="texturina text-white/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
+                      <span className="texturina text-[#3E2723]/80 text-lg tracking-widest block transform -rotate-0 leading-relaxed">
                         {portfolios[getNextIndex()].title.split(' ').map((word, i) => (
                           <span key={i} className="block mb-1">{word}</span>
                         ))}
@@ -269,10 +269,10 @@ const EventPortfolioSection = () => {
           {/* Mobile Navigation */}
           <div className="lg:hidden flex justify-center items-center gap-4 sm:gap-6 pb-6 md:pb-8 z-10 px-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, backgroundColor: '#7A3E46' }}
               whileTap={{ scale: 0.95 }}
               onClick={prevSlide}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full backdrop-blur-md bg-white/10 border border-white/40 flex items-center justify-center text-white shadow-xl flex-shrink-0"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#9D5C63] border border-[#9D5C63] flex items-center justify-center text-[#FFF0E5] shadow-xl flex-shrink-0"
             >
               <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
             </motion.button>
@@ -283,17 +283,17 @@ const EventPortfolioSection = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'w-6 sm:w-8 bg-white' : 'w-1.5 sm:w-2 bg-white/40'
+                    index === currentSlide ? 'w-6 sm:w-8 bg-[#9D5C63]' : 'w-1.5 sm:w-2 bg-[#9D5C63]/40'
                   }`}
                 />
               ))}
             </div>
             
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, backgroundColor: '#7A3E46' }}
               whileTap={{ scale: 0.95 }}
               onClick={nextSlide}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full backdrop-blur-md bg-white/10 border border-white/40 flex items-center justify-center text-white shadow-xl flex-shrink-0"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#9D5C63] border border-[#9D5C63] flex items-center justify-center text-[#FFF0E5] shadow-xl flex-shrink-0"
             >
               <ChevronRight size={20} className="sm:w-6 sm:h-6" />
             </motion.button>

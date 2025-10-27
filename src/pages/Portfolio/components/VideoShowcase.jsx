@@ -86,7 +86,7 @@ const VideoShowcase = () => {
   };
 
   return (
-    <section className="relative w-full bg-white py-20 px-6">
+    <section className="relative w-full bg-[#FAF8F5] py-20 px-6">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@400;700&display=swap');
         
@@ -104,8 +104,8 @@ const VideoShowcase = () => {
 
         .video-container:hover {
           border-radius: 20px;
-          border: 3px solid #d4af37;
-          box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+          border: 3px solid #9D5C63;
+          box-shadow: 0 20px 60px rgba(157, 92, 99, 0.3);
           transform: translateY(-8px);
         }
 
@@ -122,7 +122,7 @@ const VideoShowcase = () => {
           transform: translate(-50%, -50%);
           width: 80px;
           height: 80px;
-          background: rgba(212, 175, 55, 0.9);
+          background: rgba(157, 92, 99, 0.9);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -138,14 +138,14 @@ const VideoShowcase = () => {
         .video-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(to top, rgba(45, 27, 78, 0.8), transparent);
+          background: linear-gradient(to top, rgba(62, 39, 35, 0.8), transparent);
         }
 
         .video-title {
           position: absolute;
           bottom: 20px;
           left: 20px;
-          color: white;
+          color: #FFF0E5;
           font-weight: bold;
           font-size: 1.1rem;
           z-index: 10;
@@ -154,14 +154,14 @@ const VideoShowcase = () => {
 
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.3em] text-yellow-600 font-semibold mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             Watch Our Work
           </p>
-          <h2 className="text-5xl font-bold text-purple-900 texturina mb-4">
+          <h2 className="text-5xl font-bold text-[#3E2723] texturina mb-4">
             Video Showcase
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>
+          <p className="text-xl text-[#3E2723]/80 max-w-2xl mx-auto">
             Experience the magic of our events through these highlight reels
           </p>
         </div>
@@ -187,7 +187,7 @@ const VideoShowcase = () => {
 
                 {playingVideo !== video.id && (
                   <div className="play-button">
-                    <Play size={32} color="#2d1b4e" />
+                    <Play size={32} color="#FFF0E5" />
                   </div>
                 )}
 

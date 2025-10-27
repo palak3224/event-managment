@@ -62,31 +62,35 @@ const CateringCarousel = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100 py-2 md:py-6 px-2 md:px-6">
+    <div className="w-full bg-[#FAF8F5] py-2 md:py-6 px-2 md:px-6">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .dark-purple {
-          background-color: #2d1b4e;
+        .primary-mauve-bg {
+          background-color: #9D5C63;
         }
         
-        .golden {
-          color: #d4af37;
+        .text-espresso {
+          color: #3E2723;
+        }
+
+        .accent-cream-text {
+            color: #FFF0E5;
         }
         
-        .golden-bg {
-          background-color: #d4af37;
+        .primary-mauve-border {
+          border-color: #9D5C63;
         }
-        
-        .golden-border {
-          border-color: #d4af37;
+
+        .hover-deep-mauve:hover {
+            background-color: #7A3E46;
         }
       `}</style>
 
-      <div className='w-full bg-white mb-6 md:mb-8 px-12 py-16 rounded-3xl'>
+      <div className='w-full bg-[#FFF0E5] mb-6 md:mb-8 px-12 py-16 rounded-3xl'>
         <div className="max-w-8xl mx-auto">
             <h1 
-            className="text-4xl md:text-5xl lg:text-5xl text-center mb-6 md:mb-8 px-4 golden"
+            className="text-4xl md:text-5xl lg:text-5xl text-center mb-6 md:mb-8 px-4 text-espresso"
             style={{ 
                 fontFamily: 'Texturina, serif',
                 fontWeight: 600,
@@ -98,10 +102,10 @@ const CateringCarousel = () => {
             
             <div className="flex justify-center mb-12 md:mb-16">
             <div 
-                className="dark-purple px-6 py-2 rounded-full border-2 golden-border inline-block"
+                className="primary-mauve-bg px-6 py-2 rounded-full border-2 primary-mauve-border inline-block"
             >
                 <p 
-                className="golden text-sm md:text-base tracking-wide"
+                className="accent-cream-text text-sm md:text-base tracking-wide"
                 style={{ 
                     fontFamily: 'Texturina, serif',
                     fontWeight: 500
@@ -132,7 +136,7 @@ const CateringCarousel = () => {
                     />
                     
                     <motion.div
-                    className="absolute inset-0 dark-purple flex flex-col items-center justify-center p-6 md:p-8"
+                    className="absolute inset-0 primary-mauve-bg flex flex-col items-center justify-center p-6 md:p-8"
                     initial={{ opacity: 0.85 }}
                     animate={{ opacity: hoveredCard === service.id ? 0 : 0.85 }}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -145,7 +149,7 @@ const CateringCarousel = () => {
                     transition={{ duration: 0.6, ease: "easeInOut" }}
                     >
                     <h3 
-                        className="golden text-2xl md:text-3xl mb-3 text-center"
+                        className="accent-cream-text text-2xl md:text-3xl mb-3 text-center"
                         style={{ 
                         fontFamily: 'Texturina, serif',
                         fontWeight: 600
@@ -154,7 +158,7 @@ const CateringCarousel = () => {
                         {service.title}
                     </h3>
                     <p 
-                        className="golden text-sm md:text-base tracking-wide text-center opacity-90"
+                        className="accent-cream-text text-sm md:text-base tracking-wide text-center opacity-90"
                         style={{ 
                         fontFamily: 'Texturina, serif',
                         fontWeight: 400
@@ -170,19 +174,19 @@ const CateringCarousel = () => {
             <button
                 onClick={handlePrev}
                 disabled={currentIndex === 0}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 w-10 h-10 md:w-12 md:h-12 rounded-full dark-purple flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed transition-opacity border-2 golden-border"
-                style={{ boxShadow: '0 4px 12px rgba(45, 27, 78, 0.3)' }}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 w-10 h-10 md:w-12 md:h-12 rounded-full primary-mauve-bg flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed transition-opacity border-2 primary-mauve-border hover-deep-mauve"
+                style={{ boxShadow: '0 4px 12px rgba(157, 92, 99, 0.3)' }}
             >
-                <ChevronLeft size={20} className="golden" style={{ color: '#d4af37' }} />
+                <ChevronLeft size={20} className="accent-cream-text" />
             </button>
 
             <button
                 onClick={handleNext}
                 disabled={currentIndex === maxIndex}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 w-10 h-10 md:w-12 md:h-12 rounded-full dark-purple flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed transition-opacity border-2 golden-border"
-                style={{ boxShadow: '0 4px 12px rgba(45, 27, 78, 0.3)' }}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 w-10 h-10 md:w-12 md:h-12 rounded-full primary-mauve-bg flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed transition-opacity border-2 primary-mauve-border hover-deep-mauve"
+                style={{ boxShadow: '0 4px 12px rgba(157, 92, 99, 0.3)' }}
             >
-                <ChevronRight size={20} className="golden" style={{ color: '#d4af37' }} />
+                <ChevronRight size={20} className="accent-cream-text" />
             </button>
 
             <div className="flex justify-center gap-3 mt-8 md:mt-10">
@@ -194,8 +198,8 @@ const CateringCarousel = () => {
                     style={{
                     width: currentIndex === index ? '32px' : '12px',
                     height: '12px',
-                    backgroundColor: currentIndex === index ? '#d4af37' : 'transparent',
-                    borderColor: '#d4af37'
+                    backgroundColor: currentIndex === index ? '#9D5C63' : 'transparent',
+                    borderColor: '#9D5C63'
                     }}
                 />
                 ))}

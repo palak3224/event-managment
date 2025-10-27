@@ -66,35 +66,27 @@ const WelcomeAbout = () => {
         .texturina {
           font-family: 'Texturina', serif;
         }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
       `}</style>
 
       <section
         ref={sectionRef}
-        className="relative w-full bg-white py-16 md:py-24 px-4 md:px-8 lg:px-16 overflow-hidden"
+        className="relative w-full bg-[#FAF8F5] py-16 md:py-24 px-4 md:px-8 lg:px-16 overflow-hidden"
       >
         <div className="max-w-[1400px] mx-auto">
           {/* Heading Section */}
           <div className="text-center mb-12 md:mb-16">
-            <h1 className="texturina text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal golden mb-4 md:mb-6 leading-tight">
+            <h1 className="texturina text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#9D5C63] mb-4 md:mb-6 leading-tight">
               Welcome
               <br />
               to Khao Khilao Sonedo
             </h1>
-            <p className="texturina text-lg sm:text-xl md:text-2xl golden italic font-light max-w-4xl mx-auto px-4">
+            <p className="texturina text-lg sm:text-xl md:text-2xl text-[#9D5C63] italic font-light max-w-4xl mx-auto px-4">
               "Where celebrations meet culinary excellence in the heart of unforgettable moments"
             </p>
           </div>
 
           {/* Three Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Image - Tall */}
             <div className="lg:col-span-3 order-1">
               <div className="overflow-hidden h-[400px] md:h-[500px] lg:h-[600px]">
@@ -109,22 +101,24 @@ const WelcomeAbout = () => {
             </div>
 
             {/* Middle Content */}
-            <div className="lg:col-span-6 order-3 lg:order-2 flex flex-col justify-center px-4 md:px-8 md:h-[400px]">
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6 md:mb-8 text-justify">
-                Owned by the passionate culinary artists since 2020, Khao Khilao Sonedo was created 
-                by master event planners and chefs who designed every experience according to the 
-                art of celebration. Today, we house exceptional catering services and create 
-                unforgettable memories through our dedication to perfection. From intimate 
-                gatherings to grand celebrations, every event is crafted with meticulous attention 
-                to detail, ensuring that each moment becomes a cherished memory for you and your guests.
-              </p>
+            <div className="lg:col-span-6 order-3 lg:order-2 flex flex-col justify-center">
+              <div className="bg-[#FFF0E5] p-8 rounded-lg shadow-sm">
+                <p className="text-[#3E2723]/80 text-sm md:text-base leading-relaxed mb-6 md:mb-8 text-justify">
+                  Owned by the passionate culinary artists since 2020, Khao Khilao Sonedo was created 
+                  by master event planners and chefs who designed every experience according to the 
+                  art of celebration. Today, we house exceptional catering services and create 
+                  unforgettable memories through our dedication to perfection. From intimate 
+                  gatherings to grand celebrations, every event is crafted with meticulous attention 
+                  to detail, ensuring that each moment becomes a cherished memory for you and your guests.
+                </p>
 
-              <button className="group inline-flex items-center gap-3 text-gray-800 hover:text-gray-600 transition-colors w-fit">
-                <span className="texturina text-base md:text-lg italic">
-                  Discover the Events
-                </span>
-                <ArrowRight className="w-5 h-5 golden group-hover:translate-x-2 transition-transform duration-300" />
-              </button>
+                <button className="group inline-flex items-center gap-3 text-[#3E2723] hover:text-[#7A3E46] transition-colors w-fit">
+                  <span className="texturina text-base md:text-lg italic">
+                    Discover the Events
+                  </span>
+                  <ArrowRight className="w-5 h-5 text-[#9D5C63] group-hover:translate-x-2 transition-transform duration-300" />
+                </button>
+              </div>
             </div>
 
             {/* Right Images - Two Stacked */}

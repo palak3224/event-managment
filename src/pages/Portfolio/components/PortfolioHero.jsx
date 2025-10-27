@@ -36,25 +36,9 @@ const PortfolioHero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
-    <section className="relative w-full bg-white overflow-hidden">
+    <section className="relative w-full bg-[#FAF8F5] overflow-hidden">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
-        
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .text-dark-purple {
-          color: #2d1b4e;
-        }
         
         .texturina {
           font-family: 'Texturina', serif;
@@ -70,7 +54,7 @@ const PortfolioHero = () => {
         .portfolio-card-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, rgba(45, 27, 78, 0.7), rgba(45, 27, 78, 0.4));
+          background: linear-gradient(135deg, rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.4));
         }
 
         .portfolio-card-content {
@@ -97,17 +81,17 @@ const PortfolioHero = () => {
         {/* Header */}
         <div className="space-y-6 mb-12">
           <div className="inline-block">
-            <span className="text-xs uppercase tracking-[0.2em] golden font-semibold px-3 py-1.5 border-2 border-[#d4af37] rounded-full">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#9D5C63] font-semibold px-3 py-1.5 border-2 border-[#9D5C63] rounded-full">
               Our Portfolio
             </span>
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-3xl sm:text-4xl font-bold text-dark-purple texturina leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#3E2723] texturina leading-tight">
               Transforming Visions Into
-              <span className="golden block mt-2">Memorable Events</span>
+              <span className="text-[#9D5C63] block mt-2">Memorable Events</span>
             </h1>
-            <div className="w-24 h-1 golden-bg"></div>
+            <div className="w-24 h-1 bg-[#9D5C63]"></div>
           </div>
         </div>
 
@@ -127,28 +111,28 @@ const PortfolioHero = () => {
                   ></div>
                   
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2d1b4e]/90 via-[#2d1b4e]/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3E2723]/90 via-[#3E2723]/40 to-transparent"></div>
                   
                   {/* Content */}
                   <div className="relative h-full p-6 flex flex-col justify-between">
                     {/* Category Badge */}
                     <div>
-                      <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold border border-white/30">
+                      <span className="inline-block px-4 py-2 bg-[#3E2723]/20 backdrop-blur-sm rounded-full text-[#FFF0E5] text-sm font-semibold border border-[#FFF0E5]/30">
                         {project.category}
                       </span>
                     </div>
 
                     {/* Bottom Info */}
                     <div className="space-y-2">
-                      <h3 className="text-2xl sm:text-3xl font-bold text-white texturina leading-tight">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#FFF0E5] texturina leading-tight">
                         {project.title}
                       </h3>
-                      <p className="text-[#d4af37] text-lg font-semibold">
+                      <p className="text-[#FFF0E5]/90 text-lg font-semibold">
                         {project.guests}
                       </p>
                       
                       {/* View Project Button */}
-                      <button className="mt-4 flex items-center gap-2 text-white font-semibold group">
+                      <button className="mt-4 flex items-center gap-2 text-[#FFF0E5] font-semibold group">
                         <span>View Project</span>
                         <svg
                           className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"
@@ -179,8 +163,8 @@ const PortfolioHero = () => {
                 onClick={() => setActiveSlide(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === activeSlide 
-                    ? 'w-8 golden-bg' 
-                    : 'w-2 bg-gray-300'
+                    ? 'w-8 bg-[#9D5C63]' 
+                    : 'w-2 bg-[#3E2723]/30'
                 }`}
               />
             ))}
@@ -189,13 +173,13 @@ const PortfolioHero = () => {
 
         {/* Stats Grid - Mobile */}
         <div className="grid grid-cols-2 gap-4 mt-12">
-          <div className="text-center p-4 bg-gray-50 rounded-lg">
-            <div className="text-3xl font-bold golden texturina">500+</div>
-            <p className="text-sm text-gray-600 mt-1">Events</p>
+          <div className="text-center p-4 bg-[#FFF0E5] rounded-lg">
+            <div className="text-3xl font-bold text-[#9D5C63] texturina">500+</div>
+            <p className="text-sm text-[#3E2723]/80 mt-1">Events</p>
           </div>
-          <div className="text-center p-4 bg-gray-50 rounded-lg">
-            <div className="text-3xl font-bold golden texturina">50K+</div>
-            <p className="text-sm text-gray-600 mt-1">Attendees</p>
+          <div className="text-center p-4 bg-[#FFF0E5] rounded-lg">
+            <div className="text-3xl font-bold text-[#9D5C63] texturina">50K+</div>
+            <p className="text-sm text-[#3E2723]/80 mt-1">Attendees</p>
           </div>
         </div>
       </div>
@@ -207,17 +191,17 @@ const PortfolioHero = () => {
             {/* Left Content */}
             <div className="space-y-8 lg:pr-12">
               <div className="inline-block">
-                <span className="text-sm uppercase tracking-[0.3em] golden font-semibold px-4 py-2 border-2 border-[#d4af37] rounded-full">
+                <span className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold px-4 py-2 border-2 border-[#9D5C63] rounded-full">
                   Our Portfolio
                 </span>
               </div>
 
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-dark-purple texturina leading-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#3E2723] texturina leading-tight">
                   Transforming Visions Into
-                  <span className="golden block mt-2">Memorable Events</span>
+                  <span className="text-[#9D5C63] block mt-2">Memorable Events</span>
                 </h1>
-                <div className="w-32 h-1 golden-bg"></div>
+                <div className="w-32 h-1 bg-[#9D5C63]"></div>
               </div>
             </div>
 
@@ -235,13 +219,13 @@ const PortfolioHero = () => {
                     <div className="portfolio-card-overlay"></div>
                     <div className="portfolio-card-content w-full h-full p-8 flex flex-col justify-between">
                       <div>
-                        <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold">
+                        <span className="px-4 py-2 bg-[#3E2723]/20 backdrop-blur-sm rounded-full text-[#FFF0E5] text-sm font-semibold">
                           {project.category}
                         </span>
                       </div>
                       <div>
-                        <h3 className="text-3xl font-bold text-white texturina mb-2">{project.title}</h3>
-                        <p className="text-white/90">{project.guests}</p>
+                        <h3 className="text-3xl font-bold text-[#FFF0E5] texturina mb-2">{project.title}</h3>
+                        <p className="text-[#FFF0E5]/90">{project.guests}</p>
                       </div>
                     </div>
                   </Card>

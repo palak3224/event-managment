@@ -42,25 +42,23 @@ const ServicesSection = () => {
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
       `}</style>
 
-      <section className="w-full px-8 py-24 bg-white">
+      <section className="w-full px-8 py-24 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto">
           {/* Heading Section */}
           <div className="text-center mb-16">
             <h2 
-              className="text-5xl md:text-6xl mb-6"
+              className="text-5xl md:text-6xl text-[#9D5C63] mb-6"
               style={{ 
                 fontFamily: 'Texturina, serif',
-                color: '#d4af37',
                 fontWeight: 700
               }}
             >
               Where We Involve
             </h2>
             <p 
-              className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-[#3E2723] max-w-3xl mx-auto leading-relaxed"
               style={{ 
                 fontFamily: 'Texturina, serif',
-                color: '#2d1b4e'
               }}
             >
               From intimate celebrations to grand occasions, we craft exceptional experiences 
@@ -87,7 +85,7 @@ const ServiceCard = ({ service }) => {
 
   return (
     <div
-      className="relative overflow-hidden bg-white cursor-pointer"
+      className="relative overflow-hidden bg-[#FFF0E5] cursor-pointer"
       style={{ height: '500px' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -104,8 +102,8 @@ const ServiceCard = ({ service }) => {
       >
         {/* Dark overlay on hover */}
         <div
-          className="absolute inset-0 bg-black transition-opacity duration-700"
-          style={{ opacity: isHovered ? 0.4 : 0 }}
+          className="absolute inset-0 bg-[#3E2723] transition-opacity duration-700"
+          style={{ opacity: isHovered ? 0.6 : 0 }}
         />
       </div>
 
@@ -126,7 +124,7 @@ const ServiceCard = ({ service }) => {
           className="text-2xl transition-all duration-700 ease-in-out mb-4"
           style={{
             fontFamily: 'Texturina, serif',
-            color: isHovered ? '#ffffff' : '#d4af37',
+            color: isHovered ? '#FFF0E5' : '#9D5C63',
             fontWeight: 600,
             textAlign: 'center'
           }}
@@ -143,16 +141,15 @@ const ServiceCard = ({ service }) => {
           }}
         >
           <span
-            className="text-base"
+            className="text-base text-[#FFF0E5]"
             style={{
               fontFamily: 'Texturina, serif',
-              color: '#ffffff',
               fontWeight: 500
             }}
           >
             Book Now
           </span>
-          <ArrowRight size={20} color="#d4af37" strokeWidth={2.5} />
+          <ArrowRight size={20} color="#FFF0E5" strokeWidth={2.5} />
         </div>
       </div>
     </div>

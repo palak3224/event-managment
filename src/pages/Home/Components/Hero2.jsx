@@ -34,12 +34,12 @@ let showItems = [
 
 const Hero2 = () => {
   return (
-    <div className="relative h-screen overflow-hidden bg-transparent border-b-2">
+    <div className="relative h-screen overflow-hidden bg-transparent border-b-2 border-[#9D5C63]">
       {/* Background Light Rays */}
       <div className="absolute inset-0 z-0">
         <LightRays
           raysOrigin="top-center"
-          raysColor="#00ffff"
+          raysColor="#9D5C63"
           raysSpeed={1.5}
           lightSpread={0.8}
           rayLength={1.2}
@@ -54,7 +54,7 @@ const Hero2 = () => {
       {/* Heading */}
       <div className="absolute top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <h1
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-black text-center"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#3E2723] text-center"
           style={{
             fontFamily: '"Texturina", serif',
             fontOpticalSizing: 'auto',
@@ -71,7 +71,7 @@ const Hero2 = () => {
         <div className="relative h-[600px]">
           <CircularGallery
             bend={6}
-            textColor="#000000"
+            textColor="#3E2723"
             borderRadius={0.05}
             scrollEase={0.02}
             scrollSpeed={4}
@@ -89,5 +89,3 @@ const Hero2 = () => {
 }
 
 export default Hero2
-
-

@@ -39,22 +39,6 @@ const PremiumNavbar = () => {
           font-family: 'Texturina', serif;
         }
         
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .text-dark-purple {
-          color: #2d1b4e;
-        }
-
         .navbar-blur {
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
@@ -66,7 +50,7 @@ const PremiumNavbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? 'dark-purple shadow-lg' : 'bg-transparent'
+          isScrolled ? 'bg-[#9D5C63] shadow-lg' : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto">
@@ -88,14 +72,14 @@ const PremiumNavbar = () => {
 
             {/* Middle - Navigation Links (Desktop) */}
             <div className="hidden lg:flex items-center">
-              <div className="dark-purple rounded-full px-10 py-3.5 flex items-center gap-8 shadow-xl">
+              <div className="bg-[#9D5C63] rounded-full px-10 py-3.5 flex items-center gap-8 shadow-xl">
                 {navLinks.map((link, index) => (
                   <MotionLink
                     key={index}
                     to={link.to}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="golden text-base texturina font-medium tracking-wide hover:opacity-80 transition-opacity"
+                    className="text-[#FFF0E5] text-base texturina font-medium tracking-wide hover:opacity-80 transition-opacity"
                   >
                     {link.name}
                   </MotionLink>
@@ -109,9 +93,9 @@ const PremiumNavbar = () => {
                 to="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="golden-bg rounded-full px-10 py-3.5 shadow-xl"
+                className="bg-[#FFF0E5] rounded-full px-10 py-3.5 shadow-xl"
               >
-                <span className="text-dark-purple text-base texturina font-semibold tracking-wide">
+                <span className="text-[#3E2723] text-base texturina font-semibold tracking-wide">
                   Book Now
                 </span>
               </MotionLink>
@@ -121,12 +105,12 @@ const PremiumNavbar = () => {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden golden-bg p-2 rounded-md shadow-lg"
+              className="lg:hidden bg-[#9D5C63] p-2 rounded-md shadow-lg"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-dark-purple" />
+                <X className="w-6 h-6 text-[#FFF0E5]" />
               ) : (
-                <Menu className="w-6 h-6 text-dark-purple" />
+                <Menu className="w-6 h-6 text-[#FFF0E5]" />
               )}
             </motion.button>
           </div>
@@ -138,7 +122,7 @@ const PremiumNavbar = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden mt-4 dark-purple rounded-2xl p-6 shadow-2xl"
+              className="lg:hidden mt-4 bg-[#9D5C63] rounded-2xl p-6 shadow-2xl"
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, index) => (
@@ -147,7 +131,7 @@ const PremiumNavbar = () => {
                     to={link.to}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="golden text-base texturina font-medium tracking-wide py-2 hover:opacity-80 transition-opacity"
+                    className="text-[#FFF0E5] text-base texturina font-medium tracking-wide py-2 hover:opacity-80 transition-opacity"
                   >
                     {link.name}
                   </MotionLink>
@@ -156,10 +140,10 @@ const PremiumNavbar = () => {
                 <MotionLink
                   to="/contact"
                   whileTap={{ scale: 0.95 }}
-                  className="golden-bg rounded-full px-6 py-3 shadow-xl mt-2"
+                  className="bg-[#FFF0E5] rounded-full px-6 py-3 shadow-xl mt-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <span className="text-dark-purple text-base texturina font-semibold tracking-wide">
+                  <span className="text-[#3E2723] text-base texturina font-semibold tracking-wide">
                     Book Now
                   </span>
                 </MotionLink>

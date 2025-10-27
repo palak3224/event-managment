@@ -43,7 +43,7 @@ const LightRays = ({
   mouseInfluence = 0.1,
   noiseAmount = 0.0,
   distortion = 0.0,
-  className = 'bg-white'
+  className = 'bg-[#FFF0E5]'
 }) => {
   const containerRef = useRef(null);
   const uniformsRef = useRef(null);
@@ -391,6 +391,7 @@ void main() {
   return (
     <div
       ref={containerRef}
+      style={{ backgroundColor: '#FFF0E5' }}
       className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}
     />
   );

@@ -199,25 +199,9 @@ const MasonryPortfolio = () => {
     : portfolioImages.filter(img => img.category === activeCategory);
 
   return (
-    <section className="relative w-full bg-white py-20 px-6">
+    <section className="relative w-full bg-[#FAF8F5] py-20 px-6">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
-        
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .text-dark-purple {
-          color: #2d1b4e;
-        }
         
         .texturina {
           font-family: 'Texturina', serif;
@@ -235,7 +219,7 @@ const MasonryPortfolio = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background: linear-gradient(90deg, #d4af37, #f4d03f);
+          background: linear-gradient(90deg, #9D5C63, #7A3E46);
           transition: width 0.3s ease;
         }
 
@@ -248,14 +232,14 @@ const MasonryPortfolio = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.3em] golden font-semibold mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             Our Work
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-purple texturina mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3E2723] texturina mb-4">
             Portfolio Gallery
           </h2>
-          <div className="w-24 h-1 golden-bg mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>
+          <p className="text-xl text-[#3E2723]/80 max-w-2xl mx-auto">
             Explore our collection of stunning events and celebrations
           </p>
         </div>
@@ -268,8 +252,8 @@ const MasonryPortfolio = () => {
               onClick={() => setActiveCategory(category)}
               className={`category-btn px-6 py-3 font-semibold transition-colors ${
                 activeCategory === category
-                  ? 'active text-dark-purple'
-                  : 'text-gray-500 hover:text-dark-purple'
+                  ? 'active text-[#9D5C63]'
+                  : 'text-[#3E2723]/60 hover:text-[#9D5C63]'
               }`}
             >
               {category}

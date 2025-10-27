@@ -7,7 +7,7 @@ import ServicesSection from './components/ServicesSection'
 
 const About = () => {
   return (
-    <div>
+    <div className='bg-[#FAF8F5]'>
         <AboutHero />
         <WelcomeAbout />
         <VideoScrollComponent />

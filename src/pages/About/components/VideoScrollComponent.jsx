@@ -60,7 +60,7 @@ export default function VideoScrollComponent() {
           object-fit: cover;
         }
       `}</style>
-      <div ref={containerRef} className="bg-white" style={{ minHeight: '100vh' }}>
+      <div ref={containerRef} className="bg-[#FAF8F5]" style={{ minHeight: '100vh' }}>
         <div className="h-screen flex items-center justify-center relative">
           <video
             ref={videoRef}

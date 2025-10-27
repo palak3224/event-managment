@@ -4,60 +4,48 @@ import { Link } from "react-router-dom";
 
 const HowWeWorkSection = () => {
   return (
-    <section className="w-full px-8 py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-16 max-w-7xl mx-auto bg-white">
+    <section className="w-full px-8 py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-16 max-w-7xl mx-auto bg-[#FAF8F5]">
       <div>
         <span 
-          className="block mb-6 text-sm tracking-widest uppercase"
+          className="block mb-6 text-sm text-[#9D5C63] tracking-widest uppercase"
           style={{ 
             fontFamily: 'Texturina, serif',
-            color: '#d4af37',
             fontWeight: 600
           }}
         >
           Our Approach
         </span>
         <h3 
-          className="text-5xl md:text-6xl mb-8"
+          className="text-5xl md:text-6xl text-[#9D5C63] mb-8"
           style={{ 
             fontFamily: 'Texturina, serif',
-            color: '#d4af37',
             fontWeight: 700
           }}
         >
           How We Work
         </h3>
         <p 
-          className="text-lg md:text-xl leading-relaxed mb-8"
+          className="text-lg md:text-xl text-[#3E2723] leading-relaxed mb-8"
           style={{ 
             fontFamily: 'Texturina, serif',
-            color: '#2d1b4e'
           }}
         >
           From intimate gatherings to grand celebrations, we orchestrate every detail with precision and elegance. Our curated approach transforms your vision into unforgettable moments.
         </p>
         <Link to="/services">
-          <button 
-            className="px-8 py-3 border-2 transition-all duration-300"
+          <motion.button 
+            whileHover={{ scale: 1.05, backgroundColor: '#7A3E46' }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 border-2 border-[#FFF0E5] bg-[#9D5C63] text-[#FFF0E5] transition-colors duration-300"
             style={{
               fontFamily: 'Texturina, serif',
               fontSize: '16px',
               fontWeight: 600,
               letterSpacing: '1px',
-              backgroundColor: '#2d1b4e',
-              color: '#d4af37',
-              borderColor: '#d4af37'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.backgroundColor = '#d4af37';
-              e.target.style.color = '#2d1b4e';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.backgroundColor = '#2d1b4e';
-              e.target.style.color = '#d4af37';
             }}
           >
             Explore Our Services
-          </button>
+          </motion.button>
         </Link>
       </div>
       <ShuffleGrid />

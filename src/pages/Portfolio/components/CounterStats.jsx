@@ -79,25 +79,9 @@ const CounterStats = () => {
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-white py-20 px-6 overflow-hidden">
+    <section ref={sectionRef} className="relative w-full bg-[#FAF8F5] py-20 px-6 overflow-hidden">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
-        
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .text-dark-purple {
-          color: #2d1b4e;
-        }
         
         .texturina {
           font-family: 'Texturina', serif;
@@ -112,7 +96,7 @@ const CounterStats = () => {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, #d4af37, #f4d03f);
+          background: linear-gradient(135deg, #9D5C63, #7A3E46);
           opacity: 0;
           transition: opacity 0.4s ease;
           border-radius: 1rem;
@@ -130,7 +114,7 @@ const CounterStats = () => {
           font-size: 4rem;
           line-height: 1;
           font-weight: 900;
-          background: linear-gradient(135deg, #d4af37, #f4d03f);
+          background: linear-gradient(135deg, #9D5C63, #7A3E46);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -163,14 +147,14 @@ const CounterStats = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.3em] golden font-semibold mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             Our Achievements
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-purple texturina mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3E2723] texturina mb-4">
             Success in Numbers
           </h2>
-          <div className="w-24 h-1 golden-bg mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>
+          <p className="text-xl text-[#3E2723]/80 max-w-2xl mx-auto">
             Delivering excellence through every event we create
           </p>
         </div>
@@ -180,7 +164,7 @@ const CounterStats = () => {
           {statsData.map((stat, index) => (
             <div
               key={stat.id}
-              className="counter-card bg-white border-2 border-gray-100 rounded-2xl p-8 text-center hover:border-[#d4af37] hover:shadow-2xl"
+              className="counter-card bg-[#FFF0E5] border-2 border-[#3E2723]/10 rounded-2xl p-8 text-center hover:border-[#9D5C63] hover:shadow-2xl"
             >
               {/* Icon */}
               <div className="counter-icon mb-4 pulse-animation">
@@ -190,27 +174,24 @@ const CounterStats = () => {
               {/* Counter Number */}
               <div className="counter-number texturina mb-2">
                 {counts[index]}
-                <span className="text-[#d4af37]">{stat.suffix}</span>
+                <span className="text-[#9D5C63]">{stat.suffix}</span>
               </div>
 
               {/* Label */}
-              <p className="text-gray-600 font-semibold text-lg">
+              <p className="text-[#3E2723]/80 font-semibold text-lg">
                 {stat.label}
               </p>
 
               {/* Decorative Line */}
-              <div className="w-12 h-1 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] mx-auto mt-4 rounded-full"></div>
+              <div className="w-12 h-1 bg-gradient-to-r from-[#9D5C63] to-[#7A3E46] mx-auto mt-4 rounded-full"></div>
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        
       </div>
 
       {/* Background Decorative Elements */}
-      <div className="absolute top-10 left-10 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#2d1b4e]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-10 left-10 w-64 h-64 bg-[#9D5C63]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#3E2723]/5 rounded-full blur-3xl pointer-events-none"></div>
     </section>
   );
 };

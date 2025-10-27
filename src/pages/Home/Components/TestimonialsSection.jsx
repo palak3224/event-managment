@@ -72,33 +72,17 @@ const TestimonialsSection = () => {
         .texturina {
           font-family: 'Texturina', serif;
         }
-        
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .golden-border {
-          border-color: #d4af37;
-        }
       `}</style>
 
-      <div className="w-full bg-gray-100 py-2 md:py-6 px-2 md:px-6 flex items-center justify-center">
-        <div className="w-full bg-white rounded-3xl shadow-sm p-8 md:p-12 lg:p-16">
+      <div className="w-full bg-[#FAF8F5] py-2 md:py-6 px-2 md:px-6 flex items-center justify-center">
+        <div className="w-full bg-[#FFF0E5] rounded-3xl shadow-sm p-8 md:p-12 lg:p-16">
           {/* Heading Section */}
           <div className="text-center mb-6">
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="texturina golden text-lg md:text-2xl italic mb-3"
+              className="texturina text-[#9D5C63] text-lg md:text-2xl italic mb-3"
             >
               What People Say About Us
             </motion.h3>
@@ -106,7 +90,7 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl font-normal text-gray-900"
+              className="text-3xl font-normal text-[#3E2723]"
             >
               Client Testimonials
             </motion.h2>
@@ -116,21 +100,21 @@ const TestimonialsSection = () => {
           <div className="relative">
             {/* Navigation Buttons */}
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, backgroundColor: '#7A3E46' }}
               whileTap={{ scale: 0.9 }}
               onClick={handlePrevious}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-50 w-14 h-14 dark-purple rounded-full flex items-center justify-center shadow-xl hover:opacity-90 transition-opacity duration-300 -ml-4 md:-ml-7"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-50 w-14 h-14 bg-[#9D5C63] rounded-full flex items-center justify-center shadow-xl transition-colors duration-300 -ml-4 md:-ml-7"
             >
-              <ChevronLeft className="w-6 h-6 golden" strokeWidth={2.5} />
+              <ChevronLeft className="w-6 h-6 text-[#FFF0E5]" strokeWidth={2.5} />
             </motion.button>
 
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, backgroundColor: '#7A3E46' }}
               whileTap={{ scale: 0.9 }}
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-50 w-14 h-14 dark-purple rounded-full flex items-center justify-center shadow-xl hover:opacity-90 transition-opacity duration-300 -mr-4 md:-mr-7"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-50 w-14 h-14 bg-[#9D5C63] rounded-full flex items-center justify-center shadow-xl transition-colors duration-300 -mr-4 md:-mr-7"
             >
-              <ChevronRight className="w-6 h-6 golden" strokeWidth={2.5} />
+              <ChevronRight className="w-6 h-6 text-[#FFF0E5]" strokeWidth={2.5} />
             </motion.button>
 
             {/* Cards Container */}
@@ -172,19 +156,15 @@ const TestimonialsSection = () => {
                           : 'w-[320px] md:w-[380px]'
                       }`}
                     >
-                      {/* Center Card - Gray container with white inner */}
+                      {/* Center Card */}
                       {isCenter ? (
-                        <div className="bg-gray-200 rounded-2xl p-1 shadow-2xl">
-                          <div className="bg-white rounded-2xl p-8 pb-10 relative">
-                            {/* Top Left Quote */}
-                            <Quote className="absolute top-6 left-6 w-8 h-8 golden fill-current " />
-                            
-                            {/* Bottom Right Quote */}
-                            <Quote className="absolute bottom-6 right-6 w-8 h-8 golden fill-current rotate-180" />
+                        <div className="bg-[#9D5C63] rounded-2xl p-1 shadow-2xl">
+                          <div className="bg-[#FFF0E5] rounded-2xl p-8 pb-10 relative">
+                            <Quote className="absolute top-6 left-6 w-8 h-8 text-[#9D5C63] fill-current " />
+                            <Quote className="absolute bottom-6 right-6 w-8 h-8 text-[#9D5C63] fill-current rotate-180" />
 
-                            {/* Profile Image */}
                             <div className="flex justify-center -mt-16 mb-4">
-                              <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg border-4 border-white bg-white">
+                              <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg border-4 border-[#FFF0E5] bg-[#FFF0E5]">
                                 <img
                                   src={testimonial.image}
                                   alt={testimonial.name}
@@ -193,50 +173,40 @@ const TestimonialsSection = () => {
                               </div>
                             </div>
 
-                            {/* Name */}
-                            <h4 className="text-xl font-bold text-gray-900 text-center mb-1">
+                            <h4 className="text-xl font-bold text-[#3E2723] text-center mb-1">
                               {testimonial.name}
                             </h4>
-
-                            {/* Company */}
-                            <p className="text-sm text-gray-500 text-center mb-4">
+                            <p className="text-sm text-[#3E2723]/70 text-center mb-4">
                               {testimonial.company}
                             </p>
 
-                            {/* Stars */}
                             <div className="flex justify-center gap-1 mb-4">
                               {[...Array(5)].map((_, i) => (
                                 <Star
                                   key={i}
-                                  className="w-5 h-5 golden fill-current"
+                                  className="w-5 h-5 text-[#9D5C63] fill-current"
                                 />
                               ))}
                             </div>
 
-                            {/* Review */}
-                            <p className="text-gray-600 text-sm leading-relaxed text-center px-2">
+                            <p className="text-[#3E2723]/80 text-sm leading-relaxed text-center px-2">
                               {testimonial.review}
                             </p>
 
-                            {/* Card Number */}
-                            <div className="absolute bottom-4 left-6 text-gray-300 text-sm font-medium">
+                            <div className="absolute bottom-4 left-6 text-[#3E2723]/30 text-sm font-medium">
                               {String(activeIndex + 1).padStart(2, '0')}.
                             </div>
                           </div>
                         </div>
                       ) : (
-                        // Side Cards - White container with gray inner
-                        <div className="bg-white rounded-2xl p-1 shadow-xl">
-                          <div className="bg-gray-100 rounded-2xl p-6 pb-8 relative">
-                            {/* Top Left Quote */}
-                            <Quote className="absolute top-4 left-4 w-6 h-6 golden fill-current opacity-30" />
-                            
-                            {/* Bottom Right Quote */}
-                            <Quote className="absolute bottom-4 right-4 w-6 h-6 golden fill-current opacity-30 rotate-180" />
+                        // Side Cards
+                        <div className="bg-[#FFF0E5] rounded-2xl p-1 shadow-xl">
+                          <div className="bg-[#FAF8F5] rounded-2xl p-6 pb-8 relative">
+                            <Quote className="absolute top-4 left-4 w-6 h-6 text-[#9D5C63] fill-current opacity-30" />
+                            <Quote className="absolute bottom-4 right-4 w-6 h-6 text-[#9D5C63] fill-current opacity-30 rotate-180" />
 
-                            {/* Profile Image */}
                             <div className="flex justify-center -mt-14 mb-3">
-                              <div className="w-20 h-20 rounded-full overflow-hidden shadow-md border-4 border-white bg-white">
+                              <div className="w-20 h-20 rounded-full overflow-hidden shadow-md border-4 border-[#FAF8F5] bg-[#FAF8F5]">
                                 <img
                                   src={testimonial.image}
                                   alt={testimonial.name}
@@ -245,33 +215,27 @@ const TestimonialsSection = () => {
                               </div>
                             </div>
 
-                            {/* Name */}
-                            <h4 className="text-lg font-bold text-gray-900 text-center mb-1">
+                            <h4 className="text-lg font-bold text-[#3E2723] text-center mb-1">
                               {testimonial.name}
                             </h4>
-
-                            {/* Company */}
-                            <p className="text-xs text-gray-500 text-center mb-3">
+                            <p className="text-xs text-[#3E2723]/70 text-center mb-3">
                               {testimonial.company}
                             </p>
 
-                            {/* Stars */}
                             <div className="flex justify-center gap-1 mb-3">
                               {[...Array(5)].map((_, i) => (
                                 <Star
                                   key={i}
-                                  className="w-4 h-4 golden fill-current"
+                                  className="w-4 h-4 text-[#9D5C63] fill-current"
                                 />
                               ))}
                             </div>
 
-                            {/* Review */}
-                            <p className="text-gray-600 text-xs leading-relaxed text-center line-clamp-4">
+                            <p className="text-[#3E2723]/80 text-xs leading-relaxed text-center line-clamp-4">
                               {testimonial.review}
                             </p>
 
-                            {/* Card Number */}
-                            <div className="absolute bottom-3 left-4 text-gray-300 text-xs font-medium">
+                            <div className="absolute bottom-3 left-4 text-[#3E2723]/30 text-xs font-medium">
                               {String(index + 1).padStart(2, '0')}.
                             </div>
                           </div>
@@ -291,8 +255,8 @@ const TestimonialsSection = () => {
                   onClick={() => setActiveIndex(index)}
                   className={`transition-all duration-300 ${
                     activeIndex === index
-                      ? 'w-8 h-2 golden-bg rounded-full'
-                      : 'w-2 h-2 bg-gray-300 rounded-full hover:bg-gray-400'
+                      ? 'w-8 h-2 bg-[#9D5C63] rounded-full'
+                      : 'w-2 h-2 bg-[#9D5C63]/40 rounded-full hover:bg-[#9D5C63]/60'
                   }`}
                 />
               ))}

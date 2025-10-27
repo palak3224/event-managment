@@ -45,7 +45,6 @@ export default function ServicesHero() {
       const nextIdx = (activeIndex + 1) % heroImages.length;
       setNextIndex(nextIdx);
       
-      // Animation timeline
       const tl = gsap.timeline({
         onComplete: () => {
           setActiveIndex(nextIdx);
@@ -53,14 +52,12 @@ export default function ServicesHero() {
         }
       });
 
-      // Black overlay on old image (last 1 second)
       tl.to(overlayRef.current, {
         opacity: 0.7,
         duration: 1,
         ease: 'power2.inOut'
       });
 
-      // New image slides from bottom
       tl.fromTo(
         newImageRef.current,
         {
@@ -76,7 +73,6 @@ export default function ServicesHero() {
         '-=0.3'
       );
 
-      // Reset overlay and new image position
       tl.set(overlayRef.current, {
         opacity: 0
       });
@@ -145,7 +141,7 @@ export default function ServicesHero() {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full h-screen overflow-hidden bg-[#FAF8F5]">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
@@ -155,7 +151,7 @@ export default function ServicesHero() {
 
         .thumbnail-active {
           transform: scale(1.1);
-          box-shadow: 0 0 0 4px #d4af37, 0 0 20px rgba(212, 175, 55, 0.5);
+          box-shadow: 0 0 0 4px #9D5C63, 0 0 20px rgba(157, 92, 99, 0.5);
         }
 
         .thumbnail-inactive {
@@ -180,10 +176,10 @@ export default function ServicesHero() {
             alt={heroImages[activeIndex].title}
             className="w-full h-full object-cover"
           />
-          {/* Black Overlay */}
+          {/* Overlay */}
           <div 
             ref={overlayRef}
-            className="absolute inset-0 bg-black opacity-0"
+            className="absolute inset-0 bg-[#3E2723] opacity-0"
           />
         </div>
 
@@ -202,14 +198,14 @@ export default function ServicesHero() {
       </div>
 
       {/* Gradient Overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5]/70 via-[#FAF8F5]/20 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6">
-        <h1 className="text-6xl md:text-8xl font-bold text-white texturina mb-4 text-center">
+        <h1 className="text-6xl md:text-8xl font-bold text-[#3E2723] texturina mb-4 text-center">
           {heroImages[activeIndex].title}
         </h1>
-        <p className="text-2xl md:text-3xl text-[#d4af37] texturina text-center">
+        <p className="text-2xl md:text-3xl text-[#9D5C63] texturina text-center">
           {heroImages[activeIndex].subtitle}
         </p>
       </div>
@@ -229,8 +225,8 @@ export default function ServicesHero() {
               cursor-pointer
               ${
                 index === activeIndex
-                  ? 'thumbnail-active border-[#d4af37]'
-                  : 'thumbnail-inactive border-white/50 hover:border-white'
+                  ? 'thumbnail-active border-[#9D5C63]'
+                  : 'thumbnail-inactive border-[#3E2723]/50 hover:border-[#3E2723]'
               }
             `}
           >
@@ -254,8 +250,8 @@ export default function ServicesHero() {
               duration-500
               ${
                 index === activeIndex
-                  ? 'w-12 bg-[#d4af37]'
-                  : 'w-8 bg-white/30'
+                  ? 'w-12 bg-[#9D5C63]'
+                  : 'w-8 bg-[#3E2723]/30'
               }
             `}
           />

@@ -4,26 +4,30 @@ import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
     return (
-        <div className="w-full bg-white py-16 md:py-24 px-4 md:px-8">
+        <div className="w-full bg-[#FAF8F5] py-16 md:py-24 px-4 md:px-8">
             <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
-        
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .text-dark-purple {
-          color: #2d1b4e;
-        }
-      `}</style>
+                @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+                
+                .primary-mauve-bg {
+                  background-color: #9D5C63;
+                }
+                
+                .text-espresso {
+                  color: #3E2723;
+                }
+
+                .primary-mauve-text {
+                    color: #9D5C63;
+                }
+
+                .accent-cream-text {
+                    color: #FFF0E5;
+                }
+                
+                .hover-deep-mauve-bg:hover {
+                    background-color: #7A3E46;
+                }
+            `}</style>
 
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
@@ -50,7 +54,7 @@ const AboutSection = () => {
                     {/* Text Section - 60% */}
                     <div className="w-full lg:w-3/5 space-y-6">
                         <h2
-                            className="golden text-3xl md:text-4xl lg:text-5xl mb-2"
+                            className="text-espresso text-3xl md:text-4xl lg:text-5xl mb-2"
                             style={{
                                 fontFamily: 'Texturina, serif',
                                 fontWeight: 600,
@@ -61,7 +65,7 @@ const AboutSection = () => {
                         </h2>
 
                         <h3
-                            className="text-dark-purple text-2xl md:text-3xl lg:text-4xl mb-6"
+                            className="text-espresso text-2xl md:text-3xl lg:text-4xl mb-6"
                             style={{
                                 fontFamily: 'Texturina, serif',
                                 fontWeight: 600
@@ -70,9 +74,9 @@ const AboutSection = () => {
                             The Perfect Choice for Your Next Event.
                         </h3>
 
-                        <div className="space-y-4 text-gray-700 leading-relaxed">
+                        <div className="space-y-4 text-[#3E2723] leading-relaxed">
                             <p className="text-base md:text-md">
-                                <span className="golden text-5xl md:text-6xl float-left mr-3 leading-none" style={{ fontFamily: 'Texturina, serif', fontWeight: 700 }}>F</span>
+                                <span className="primary-mauve-text text-5xl md:text-6xl float-left mr-3 leading-none" style={{ fontFamily: 'Texturina, serif', fontWeight: 700 }}>F</span>
                                 osetta Gourmet Catering guarantee outstanding food presentation, creative cuisines, and a wide range of service styles. With over 40 years of industry experience, Fosetta Gourmet Catering is one of the leading catering services in Delhi and Gurgaon. The company is known for its expertise in wedding catering, corporate events, destination weddings, and private luxury events.
                             </p>
 
@@ -88,14 +92,14 @@ const AboutSection = () => {
                         <div className="pt-4">
                             <Link to="/about">
                                 <button
-                                    className="dark-purple text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity duration-300"
+                                    className="primary-mauve-bg accent-cream-text px-8 py-3 rounded-lg hover-deep-mauve-bg transition-colors duration-300"
                                     style={{
                                         fontFamily: 'Texturina, serif',
                                         fontWeight: 500,
                                         letterSpacing: '0.5px'
                                     }}
                                 >
-                                    <span className="golden">READ MORE ABOUT US</span>
+                                    READ MORE ABOUT US
                                 </button>
                             </Link>
                         </div>

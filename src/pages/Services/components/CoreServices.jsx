@@ -81,25 +81,9 @@ export default function CoreServices() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full min-h-screen bg-white py-24 px-6">
+    <section ref={sectionRef} className="w-full min-h-screen bg-[#FAF8F5] py-24 px-6">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
-        
-        .dark-purple {
-          background-color: #2d1b4e;
-        }
-        
-        .golden {
-          color: #d4af37;
-        }
-        
-        .golden-bg {
-          background-color: #d4af37;
-        }
-        
-        .text-dark-purple {
-          color: #2d1b4e;
-        }
         
         .texturina {
           font-family: 'Texturina', serif;
@@ -117,7 +101,7 @@ export default function CoreServices() {
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+          background: linear-gradient(90deg, transparent, rgba(157, 92, 99, 0.1), transparent);
           transition: left 0.6s ease;
           z-index: 1;
         }
@@ -137,7 +121,7 @@ export default function CoreServices() {
         }
 
         .service-card:hover::after {
-          border-color: #d4af37;
+          border-color: #9D5C63;
         }
 
         .image-container {
@@ -148,7 +132,7 @@ export default function CoreServices() {
         .image-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(180deg, transparent 0%, rgba(45, 27, 78, 0.7) 100%);
+          background: linear-gradient(180deg, transparent 0%, rgba(62, 39, 35, 0.7) 100%);
           opacity: 0;
           transition: opacity 0.5s ease;
         }
@@ -163,8 +147,8 @@ export default function CoreServices() {
           right: 1rem;
           width: 50px;
           height: 50px;
-          background: rgba(212, 175, 55, 0.95);
-          color: #2d1b4e;
+          background: rgba(157, 92, 99, 0.95);
+          color: #FFF0E5;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -191,7 +175,7 @@ export default function CoreServices() {
           left: 0;
           width: 0;
           height: 2px;
-          background: #d4af37;
+          background: #9D5C63;
           transition: width 0.3s ease;
         }
 
@@ -203,14 +187,14 @@ export default function CoreServices() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="text-sm uppercase tracking-[0.3em] golden font-semibold mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#9D5C63] font-semibold mb-4">
             What We Offer
           </p>
-          <h2 className="text-5xl md:text-6xl font-bold text-dark-purple texturina mb-4">
+          <h2 className="text-5xl md:text-6xl font-bold text-[#3E2723] texturina mb-4">
             Our Core Services
           </h2>
-          <div className="w-24 h-1 golden-bg mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-[#9D5C63] mx-auto mb-6"></div>
+          <p className="text-xl text-[#3E2723]/80 max-w-2xl mx-auto">
             Crafting exceptional experiences that exceed expectations
           </p>
         </div>
@@ -221,7 +205,7 @@ export default function CoreServices() {
             <div
               key={service.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="service-card bg-gray-50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(45,27,78,0.15)] group cursor-pointer"
+              className="service-card bg-[#FFF0E5] transition-all duration-500 hover:shadow-[0_20px_50px_rgba(157,92,99,0.15)] group cursor-pointer"
             >
               {/* Card Number */}
               <div className="card-number texturina">
@@ -240,13 +224,13 @@ export default function CoreServices() {
 
               {/* Content - 40% */}
               <div className="p-8 relative z-10">
-                <h3 className="text-2xl font-bold text-dark-purple texturina mb-4 group-hover:golden transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-[#3E2723] texturina mb-4 group-hover:text-[#9D5C63] transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-6 text-sm">
+                <p className="text-[#3E2723]/80 leading-relaxed mb-6 text-sm">
                   {service.description}
                 </p>
-                <div className="learn-more-btn flex items-center golden font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                <div className="learn-more-btn flex items-center text-[#9D5C63] font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   <span>Learn More</span>
                   <svg
                     className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
