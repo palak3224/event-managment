@@ -9,7 +9,7 @@ const HowWeWorkSection = () => {
         <span 
           className="block mb-6 text-sm text-[#9D5C63] tracking-widest uppercase"
           style={{ 
-            fontFamily: 'Texturina, serif',
+            fontFamily: '., serif',
             fontWeight: 600
           }}
         >
@@ -18,7 +18,7 @@ const HowWeWorkSection = () => {
         <h3 
           className="text-5xl md:text-6xl text-[#9D5C63] mb-8"
           style={{ 
-            fontFamily: 'Texturina, serif',
+            fontFamily: '., serif',
             fontWeight: 700
           }}
         >
@@ -27,7 +27,7 @@ const HowWeWorkSection = () => {
         <p 
           className="text-lg md:text-xl text-[#3E2723] leading-relaxed mb-8"
           style={{ 
-            fontFamily: 'Texturina, serif',
+            fontFamily: '., serif',
           }}
         >
           From intimate gatherings to grand celebrations, we orchestrate every detail with precision and elegance. Our curated approach transforms your vision into unforgettable moments.
@@ -38,7 +38,7 @@ const HowWeWorkSection = () => {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 border-2 border-[#FFF0E5] bg-[#9D5C63] text-[#FFF0E5] transition-colors duration-300"
             style={{
-              fontFamily: 'Texturina, serif',
+              fontFamily: '., serif',
               fontSize: '16px',
               fontWeight: 600,
               letterSpacing: '1px',

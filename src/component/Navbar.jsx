@@ -28,15 +28,15 @@ const PremiumNavbar = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
         
         .tangerine {
           font-family: 'Tangerine', cursive;
         }
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
         
         .navbar-blur {
@@ -79,7 +79,7 @@ const PremiumNavbar = () => {
                     to={link.to}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="text-[#FFF0E5] text-base texturina font-medium tracking-wide hover:opacity-80 transition-opacity"
+                    className="text-[#FFF0E5] text-base . font-medium tracking-wide hover:opacity-80 transition-opacity"
                   >
                     {link.name}
                   </MotionLink>
@@ -95,7 +95,7 @@ const PremiumNavbar = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-[#FFF0E5] rounded-full px-10 py-3.5 shadow-xl"
               >
-                <span className="text-[#3E2723] text-base texturina font-semibold tracking-wide">
+                <span className="text-[#3E2723] text-base . font-semibold tracking-wide">
                   Book Now
                 </span>
               </MotionLink>
@@ -131,7 +131,7 @@ const PremiumNavbar = () => {
                     to={link.to}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[#FFF0E5] text-base texturina font-medium tracking-wide py-2 hover:opacity-80 transition-opacity"
+                    className="text-[#FFF0E5] text-base . font-medium tracking-wide py-2 hover:opacity-80 transition-opacity"
                   >
                     {link.name}
                   </MotionLink>
@@ -143,7 +143,7 @@ const PremiumNavbar = () => {
                   className="bg-[#FFF0E5] rounded-full px-6 py-3 shadow-xl mt-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <span className="text-[#3E2723] text-base texturina font-semibold tracking-wide">
+                  <span className="text-[#3E2723] text-base . font-semibold tracking-wide">
                     Book Now
                   </span>
                 </MotionLink>

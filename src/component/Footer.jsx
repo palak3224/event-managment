@@ -16,10 +16,10 @@ const Footer = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
       `}</style>
 
@@ -45,7 +45,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-[#FFF0E5] texturina text-2xl mb-6 font-light">About us</h3>
+              <h3 className="text-[#FFF0E5] . text-2xl mb-6 font-light">About us</h3>
               <p className="text-[#FFF0E5]/70 text-sm leading-relaxed">
                 Khao khilao blends culinary artistry with warm hospitality, offering an experience that delights every sense. From handcrafted dishes to elegant ambiance, we focus on detail and flavor. Each plate is inspired by tradition and elevated with innovation to create something truly unforgettable.
               </p>
@@ -58,7 +58,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-[#FFF0E5] texturina text-2xl mb-6 font-light">Contact info</h3>
+              <h3 className="text-[#FFF0E5] . text-2xl mb-6 font-light">Contact info</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-[#FFF0E5] mt-1 flex-shrink-0" />
@@ -112,7 +112,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-[#FFF0E5] texturina text-2xl mb-6 font-light">Quick links</h3>
+              <h3 className="text-[#FFF0E5] . text-2xl mb-6 font-light">Quick links</h3>
               <ul className="space-y-3">
                 {[
                   { name: 'Home', to: '/' },
@@ -141,7 +141,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="text-[#FFF0E5] texturina text-2xl mb-6 font-light">Subscribe</h3>
+              <h3 className="text-[#FFF0E5] . text-2xl mb-6 font-light">Subscribe</h3>
               <p className="text-[#FFF0E5]/70 text-sm leading-relaxed mb-6">
                 Want to be notified when we launch a new template or an update. Just sign up and we'll send you a notification by email.
               </p>
@@ -206,7 +206,7 @@ const Footer = () => {
 
                 </div>
                 <div>
-                  <h4 className="text-[#FFF0E5] texturina text-lg font-semibold">KHAO</h4>
+                  <h4 className="text-[#FFF0E5] . text-lg font-semibold">KHAO</h4>
                   <p className="text-[#FFF0E5]/50 text-xs">KHILAO SONE DO</p>
                 </div>
               </div>

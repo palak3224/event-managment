@@ -67,10 +67,10 @@ const TestimonialsSection = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
       `}</style>
 
@@ -82,7 +82,7 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="texturina text-[#9D5C63] text-lg md:text-2xl italic mb-3"
+              className=". text-[#9D5C63] text-lg md:text-2xl italic mb-3"
             >
               What People Say About Us
             </motion.h3>

@@ -30,10 +30,10 @@ const ContactFormSection = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
         
-        .texturina {
-          font-family: 'Texturina', serif;
+        .. {
+          font-family: '.', serif;
         }
 
         input[type="date"]::-webkit-calendar-picker-indicator {
@@ -53,7 +53,7 @@ const ContactFormSection = () => {
               className="order-2 lg:order-1"
             >
               <div className="mb-8">
-                <h3 className="texturina text-[#9D5C63] text-lg md:text-xl italic mb-2">
+                <h3 className=". text-[#9D5C63] text-lg md:text-xl italic mb-2">
                   Get In Touch
                 </h3>
                 <h2 className="text-3xl md:text-4xl font-normal text-[#3E2723] mb-3">

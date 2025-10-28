@@ -39,7 +39,7 @@ const ServicesSection = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=.:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
       `}</style>
 
       <section className="w-full px-8 py-24 bg-[#FAF8F5]">
@@ -49,7 +49,7 @@ const ServicesSection = () => {
             <h2 
               className="text-5xl md:text-6xl text-[#9D5C63] mb-6"
               style={{ 
-                fontFamily: 'Texturina, serif',
+                fontFamily: '., serif',
                 fontWeight: 700
               }}
             >
@@ -58,7 +58,7 @@ const ServicesSection = () => {
             <p 
               className="text-lg md:text-xl text-[#3E2723] max-w-3xl mx-auto leading-relaxed"
               style={{ 
-                fontFamily: 'Texturina, serif',
+                fontFamily: '., serif',
               }}
             >
               From intimate celebrations to grand occasions, we craft exceptional experiences 
@@ -123,7 +123,7 @@ const ServiceCard = ({ service }) => {
         <h3
           className="text-2xl transition-all duration-700 ease-in-out mb-4"
           style={{
-            fontFamily: 'Texturina, serif',
+            fontFamily: '., serif',
             color: isHovered ? '#FFF0E5' : '#9D5C63',
             fontWeight: 600,
             textAlign: 'center'
@@ -143,7 +143,7 @@ const ServiceCard = ({ service }) => {
           <span
             className="text-base text-[#FFF0E5]"
             style={{
-              fontFamily: 'Texturina, serif',
+              fontFamily: '., serif',
               fontWeight: 500
             }}
           >
