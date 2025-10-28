@@ -11,13 +11,13 @@ const CateringCarousel = () => {
       id: 1,
       title: "Destination Wedding",
       description: "Created in style",
-      image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80"
+      image: "https://weddingsutra.com/images/Vendor_Images/Wedding_Planners/veydaa-events/veydaa-events-13.jpg"
     },
     {
       id: 2,
       title: "Private Luxury Event",
       description: "Exclusive occasions",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
+      image: "https://weddingsutra.com/images/Vendor_Images/Wedding_Planners/veydaa-events/veydaa-events-12.jpg"
     },
     {
       id: 3,

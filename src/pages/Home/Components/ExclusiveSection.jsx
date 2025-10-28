@@ -9,7 +9,7 @@ const EventPortfolioSection = () => {
     {
       id: 0,
       title: 'CORPORATE SUMMIT',
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
+      image: 'https://theroyalreception.com/assets/img/gallery/events/25.jpg',
       description: 'A prestigious three-day corporate summit featuring keynote speakers, networking sessions, and innovative workshops. Hosted 500+ executives from leading global companies in an atmosphere of sophistication and excellence.',
       location: 'Grand Ballroom, Mumbai',
       attendees: '500+ Guests'
@@ -25,18 +25,10 @@ const EventPortfolioSection = () => {
     {
       id: 2,
       title: 'PRODUCT LAUNCH GALA',
-      image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80',
+      image: 'https://nohovenues.com/wp-content/uploads/2019/06/19-1024x683.jpg',
       description: 'A high-impact product launch event combining cutting-edge technology with theatrical presentations. Interactive displays, live demonstrations, and an exclusive networking reception created an unforgettable brand experience.',
       location: 'Tech Park Auditorium, Bangalore',
       attendees: '350+ Guests'
-    },
-    {
-      id: 3,
-      title: 'CHARITY FUNDRAISER EVENING',
-      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80',
-      description: 'An elegant evening dedicated to making a difference, featuring silent auctions, live performances, and inspiring speeches. The event successfully raised substantial funds while creating meaningful connections among philanthropists.',
-      location: 'Heritage Hotel, Delhi',
-      attendees: '400+ Guests'
     },
     {
       id: 4,

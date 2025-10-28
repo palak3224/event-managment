@@ -4,13 +4,13 @@ import gsap from 'gsap';
 const heroImages = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=80',
+    url: 'https://jaspira.in/wp-content/uploads/2024/10/chunda-palace-new-1.webp',
     title: 'Corporate Events',
     subtitle: 'Professional Excellence'
   },
   {
     id: 2,
-    url: 'https://triptradition.com/wp-content/uploads/2025/02/Destination-Wedding-at-Summit-Wedding-Resort-Rishikesh-02.jpg',
+    url: 'https://eventsmanagementkerala.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-26-at-7.48.08-PM.webp',
     title: 'Wedding Ceremonies',
     subtitle: 'Moments of Forever'
   },
@@ -22,7 +22,7 @@ const heroImages = [
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80',
+    url: 'https://suryapalace.com/assets/img/blogs/top-exhibition-hall-in-vadodara-grand-mercure-surya-palace.webp',
     title: 'Grand Exhibitions',
     subtitle: 'Spectacular Showcases'
   }

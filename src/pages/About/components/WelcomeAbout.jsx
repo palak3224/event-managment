@@ -92,7 +92,7 @@ const WelcomeAbout = () => {
               <div className="overflow-hidden h-[400px] md:h-[500px] lg:h-[600px]">
                 <div ref={leftImageRef} className="w-full h-full">
                   <img
-                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80"
+                    src="https://eventsmanagementkerala.com/wp-content/uploads/2023/06/wedding-decorations-1.jpg"
                     alt="Event venue"
                     className="w-full h-full object-cover"
                   />
@@ -104,12 +104,7 @@ const WelcomeAbout = () => {
             <div className="lg:col-span-6 order-3 lg:order-2 flex flex-col justify-center">
               <div className="bg-[#FFF0E5] p-8 rounded-lg shadow-sm">
                 <p className="text-[#3E2723]/80 text-sm md:text-base leading-relaxed mb-6 md:mb-8 text-justify">
-                  Owned by the passionate culinary artists since 2020, Khao Khilao Sonedo was created 
-                  by master event planners and chefs who designed every experience according to the 
-                  art of celebration. Today, we house exceptional catering services and create 
-                  unforgettable memories through our dedication to perfection. From intimate 
-                  gatherings to grand celebrations, every event is crafted with meticulous attention 
-                  to detail, ensuring that each moment becomes a cherished memory for you and your guests.
+                  Owned by the passionate culinary artists since 2020, Khao Khilao Sonedo was created by master event planners and chefs who designed every experience according to the art of celebration. Today, we house exceptional catering services and create unforgettable memories through our dedication to perfection. From intimate gatherings to grand celebrations, every event is crafted with meticulous attention to detail, ensuring that each moment becomes a cherished memory for you and your guests.
                 </p>
 
                 <button className="group inline-flex items-center gap-3 text-[#3E2723] hover:text-[#7A3E46] transition-colors w-fit">
@@ -127,7 +122,7 @@ const WelcomeAbout = () => {
               <div className="overflow-hidden h-[250px] md:h-[280px]">
                 <div ref={rightImage1Ref} className="w-full h-full">
                   <img
-                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+                    src="https://eventsmanagementkerala.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-26-at-7.48.05-PM.webp"
                     alt="Event decoration"
                     className="w-full h-full object-cover"
                   />
@@ -138,7 +133,7 @@ const WelcomeAbout = () => {
               <div className="overflow-hidden h-[300px] md:h-[350px]">
                 <div ref={rightImage2Ref} className="w-full h-full">
                   <img
-                    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
+                    src="https://weddingsutra.com/images/Vendor_Images/Wedding_Planners/classique-events/classique-01.jpg"
                     alt="Celebration event"
                     className="w-full h-full object-cover"
                   />

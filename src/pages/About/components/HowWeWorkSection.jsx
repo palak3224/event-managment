@@ -25,12 +25,12 @@ const HowWeWorkSection = () => {
           How We Work
         </h3>
         <p 
-          className="text-lg md:text-xl text-[#3E2723] leading-relaxed mb-8"
+          className="text-lg md:text-lg text-[#3E2723] leading-relaxed mb-8"
           style={{ 
             fontFamily: '., serif',
           }}
         >
-          From intimate gatherings to grand celebrations, we orchestrate every detail with precision and elegance. Our curated approach transforms your vision into unforgettable moments.
+          At Khao Khilao Sone Do, our mission is to transform every event into an unforgettable experience. We are committed to providing exceptional hospitality, innovative solutions, and meticulous attention to detail. Whether it’s a grand wedding, a corporate gathering, or an intimate celebration, we strive to exceed expectations by blending creativity, quality, and personalized service.
         </p>
         <Link to="/services">
           <motion.button 
@@ -73,23 +73,23 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+    src: "https://weddingsutra.com/images/Vendor_Images/Wedding_Planners/classique-events/classique-02.jpg",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
+    src: "https://weddingsutra.com/images/Vendor_Images/Wedding_Planners/classique-events/classique-12.jpg",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+    src: "https://eventsmanagementkerala.com/wp-content/uploads/2023/08/Germen-transparent-tent-wedding-events-Kerala%E2%80%8B.webp",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80",
+    src: "https://eventsmanagementkerala.com/wp-content/uploads/2022/09/wedding2.webp",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80",
+    src: "https://jaspira.in/wp-content/uploads/2024/11/Jiapur-6.webp",
   },
   {
     id: 6,

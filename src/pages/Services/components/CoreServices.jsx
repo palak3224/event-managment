@@ -15,19 +15,19 @@ const servicesData = [
     id: 2,
     title: 'Wedding Planning',
     description: 'Creating unforgettable moments with meticulous attention to every detail of your special day.',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
+    image: 'https://eventsmanagementkerala.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-26-at-7.48.10-PM.webp',
   },
   {
     id: 3,
     title: 'Social Gatherings',
     description: 'Birthdays, anniversaries, and celebrations designed to bring people together in style.',
-    image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
+    image: 'https://res.cloudinary.com/ddnb10zkq/image/upload/v1761654478/wmremove-transformed_lmxvco.jpg',
   },
   {
     id: 4,
     title: 'Product Launches',
     description: 'Strategic event execution to showcase your brand and products with maximum impact.',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80',
+    image: 'https://vrweddingplanners.net/wp-content/uploads/2020/10/entertainment-7.jpg',
   },
   {
     id: 5,

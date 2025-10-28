@@ -7,17 +7,17 @@ const ServicesSection = () => {
     {
       id: 1,
       title: "Weddings",
-      image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80"
+      image: "https://weddingsutra.com/images/Vendor_Images/Wedding_Planners/wingscraft-entertainment/wce-01.jpg"
     },
     {
       id: 2,
       title: "Corporate Events",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+      image: "https://www.partyplanetindia.com/images/gallery/corporate-fun-events/big-img/29.jpg"
     },
     {
       id: 3,
       title: "Private Celebrations",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
+      image: "https://thebingetown-in.b-cdn.net/newWeb/home_whychoose_is_3.webp"
     },
     {
       id: 4,
@@ -27,7 +27,7 @@ const ServicesSection = () => {
     {
       id: 5,
       title: "Fashion Shows",
-      image: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80"
+      image: "https://www.mashindia.com/wp-content/uploads/2023/03/unnamed-2.jpg"
     },
     {
       id: 6,
