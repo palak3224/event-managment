@@ -64,7 +64,7 @@ export default function VideoScrollComponent() {
         <div className="h-screen flex items-center justify-center relative">
           <video
             ref={videoRef}
-            src="https://res.cloudinary.com/ddnb10zkq/video/upload/v1760062884/WhatsApp_Video_2025-10-07_at_10.53.36_asy7zr.mp4"
+            src="https://res.cloudinary.com/ddnb10zkq/video/upload/v1761673223/InShot_20251028_225647833_wzbnvs.mp4"
             autoPlay
             muted
             loop

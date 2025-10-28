@@ -280,7 +280,7 @@ const ContactPage = () => {
                     className="w-full h-full object-cover"
                   >
                     <source
-                      src="https://res.cloudinary.com/ddnb10zkq/video/upload/v1759982414/Wedding_Decoration_Dubai._Event_Rentals_Dubai._Wedding_Planner_Dubai._Wedding_at_Kempinski_The_Palm_ggphlu.mp4"
+                      src="https://res.cloudinary.com/ddnb10zkq/video/upload/v1761672602/InShot_20251028_225242470_rrhuvk.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
