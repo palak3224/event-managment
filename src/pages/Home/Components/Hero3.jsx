@@ -163,7 +163,7 @@ const Hero3 = () => {
                             >
                                 Khao Khilao
                                 <br />
-                                <span className="primary-mauve-text">Sonedo</span>
+                                <span className="primary-mauve-text">Sone do</span>
                             </motion.h1>
 
                             {/* Description */}
