@@ -59,13 +59,13 @@ const PremiumNavbar = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="rounded-md cursor-pointer"
+              className="rounded-full cursor-pointer overflow-hidden w-20 h-20 md:w-24 md:h-24 p-2"
             >
-              <Link to="/">
+              <Link to="/" className="w-full h-full flex items-center justify-center">
                 <img
-                  src="/logo.png"
+                  src="https://res.cloudinary.com/ddnb10zkq/image/upload/v1763730605/cropped_circle_image_ybpqhs.png"
                   alt="KKH Logo"
-                  className="h-20 md:h-24 w-auto object-fit"
+                  className="w-full h-full object-contain rounded-full"
                 />
               </Link>
             </motion.div>

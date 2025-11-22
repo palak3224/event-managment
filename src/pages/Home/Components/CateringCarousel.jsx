@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CateringCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -119,8 +120,8 @@ const CateringCarousel = () => {
             <div className="relative px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
                 {getVisibleServices().map((service, index) => (
+                <Link key={service.id} to="/services" className="block">
                 <motion.div
-                    key={service.id}
                     className="relative h-80 md:h-96 overflow-hidden cursor-pointer rounded-2xl"
                     style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}
                     onMouseEnter={() => setHoveredCard(service.id)}
@@ -168,6 +169,7 @@ const CateringCarousel = () => {
                     </p>
                     </motion.div>
                 </motion.div>
+                </Link>
                 ))}
             </div>
 

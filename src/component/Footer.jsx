@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = () => {
-    if (email) {
-      console.log('Subscribed:', email);
-      setEmail('');
-    }
-  };
 
   return (
     <>
@@ -64,12 +56,8 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-[#FFF0E5] mt-1 flex-shrink-0" />
                   <div className="text-sm">
                     <p className="text-[#FFF0E5]/90">Call:</p>
-                    <a href="tel:+919811747715" className="text-[#FFF0E5]/70 hover:text-[#FFF0E5] transition-colors">
-                      +91 9811747715
-                    </a>
-                    <span className="text-[#FFF0E5]/70"> , </span>
-                    <a href="tel:+919999850265" className="text-[#FFF0E5]/70 hover:text-[#FFF0E5] transition-colors">
-                      +91 9999850265
+                    <a href="tel:+917275901611" className="text-[#FFF0E5]/70 hover:text-[#FFF0E5] transition-colors">
+                      +91 7275901611
                     </a>
                   </div>
                 </div>
@@ -78,8 +66,8 @@ const Footer = () => {
                   <Mail className="w-4 h-4 text-[#FFF0E5] mt-1 flex-shrink-0" />
                   <div className="text-sm">
                     <p className="text-[#FFF0E5]/90">Write:</p>
-                    <a href="mailto:info@khaoKhilaoSonedo.in" className="text-[#FFF0E5]/70 hover:text-[#FFF0E5] transition-colors">
-                      info@khaoKhilaoSonedo.in
+                    <a href="mailto:contact@khaoKhilaoSonedo.in" className="text-[#FFF0E5]/70 hover:text-[#FFF0E5] transition-colors">
+                      contact@khaoKhilaoSonedo.in
                     </a>
                   </div>
                 </div>
@@ -89,19 +77,22 @@ const Footer = () => {
                   <div className="text-sm">
                     <p className="text-[#FFF0E5]/90">Find us:</p>
                     <p className="text-[#FFF0E5]/70">
-                      42, Udyog Vihar & Sector 37 Gurgaon<br />122001
+                      IT Park, Plot Number B2, Sahastradhara Rd, Doon IT Park, Govind Vihar, Dehradun, Uttarakhand 248013
                     </p>
                   </div>
                 </div>
 
-                <motion.a
-                  href="#contact"
+                <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="text-[#FFF0E5] inline-block text-sm font-medium hover:underline mt-2"
                 >
-                  Get in Touch →
-                </motion.a>
+                  <Link
+                    to="/contact"
+                    className="text-[#FFF0E5] inline-block text-sm font-medium hover:underline mt-2"
+                  >
+                    Get in Touch →
+                  </Link>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -134,38 +125,27 @@ const Footer = () => {
               </ul>
             </motion.div>
 
-            {/* Subscribe Section */}
+            {/* Contact Us Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="text-[#FFF0E5] . text-2xl mb-6 font-light">Subscribe</h3>
+              <h3 className="text-[#FFF0E5] . text-2xl mb-6 font-light">Contact Us</h3>
               <p className="text-[#FFF0E5]/70 text-sm leading-relaxed mb-6">
-                Want to be notified when we launch a new template or an update. Just sign up and we'll send you a notification by email.
+                Ready to plan your perfect event? Get in touch with us today and let's create something extraordinary together.
               </p>
               
-              <div className="flex gap-2">
-                <div className="relative flex-1">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-[#FFF0E5]/10 border border-[#FFF0E5]/20 rounded-lg focus:outline-none focus:border-[#FFF0E5] transition-colors duration-300 text-[#FFF0E5] placeholder-[#FFF0E5]/50 text-sm"
-                  />
-                  <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FFF0E5]/40" />
-                </div>
+              <Link to="/contact">
                 <motion.button
                   whileHover={{ scale: 1.05, opacity: 0.9 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={handleSubscribe}
-                  className="bg-[#FFF0E5] px-6 py-3 rounded-lg font-medium text-[#3E2723] transition-opacity duration-300 text-sm"
+                  className="w-full bg-[#FFF0E5] px-6 py-3 rounded-lg font-medium text-[#3E2723] transition-opacity duration-300 text-sm"
                 >
-                  SEND
+                  Get in Touch
                 </motion.button>
-              </div>
+              </Link>
             </motion.div>
           </div>
 
@@ -201,8 +181,8 @@ const Footer = () => {
           <div className="container mx-auto px-6 md:px-12 lg:px-16 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-3">
-                <div className="bg-[#FFF0E5] rounded-full flex items-center justify-center">
-            <img src="/logo.png" alt="KKH Logo" className="h-16 md:h-24 w-auto object-contain" />
+                <div className="bg-[#FFF0E5] rounded-full flex items-center justify-center overflow-hidden w-16 h-16 md:w-24 md:h-24 p-2">
+            <img src="https://res.cloudinary.com/ddnb10zkq/image/upload/v1763730605/cropped_circle_image_ybpqhs.png" alt="KKH Logo" className="w-full h-full object-contain rounded-full" />
 
                 </div>
                 <div>

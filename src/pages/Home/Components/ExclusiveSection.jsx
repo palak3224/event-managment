@@ -194,14 +194,6 @@ const EventPortfolioSection = () => {
                         {portfolios[currentSlide].description}
                       </p>
                       
-                      <motion.button
-                        whileHover={{ scale: 1.05, color: '#7A3E46' }}
-                        whileTap={{ scale: 0.95 }}
-                        className="text-[#9D5C63] font-medium text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center gap-2"
-                      >
-                        VIEW DETAILS
-                        <span className="text-base sm:text-lg">›</span>
-                      </motion.button>
                     </div>
                   </div>
                 </motion.div>

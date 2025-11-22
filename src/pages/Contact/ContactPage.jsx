@@ -31,7 +31,7 @@ const ContactPage = () => {
     {
       icon: <Phone size={28} />,
       title: "Phone",
-      content: "+91 98765 43210",
+      content: "+91 7275901611",
       subContent: "Mon - Sat, 9AM - 8PM"
     },
     {
@@ -43,8 +43,8 @@ const ContactPage = () => {
     {
       icon: <MapPin size={28} />,
       title: "Office",
-      content: "123 Event Plaza, Indore",
-      subContent: "Madhya Pradesh, India"
+      content: "IT Park, Plot Number B2, Sahastradhara Rd",
+      subContent: "Doon IT Park, Govind Vihar, Dehradun, Uttarakhand 248013"
     },
     {
       icon: <Clock size={28} />,

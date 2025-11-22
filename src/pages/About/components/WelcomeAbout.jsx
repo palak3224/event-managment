@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,12 +108,12 @@ const WelcomeAbout = () => {
                   Owned by the passionate culinary artists since 2020, Khao Khilao Sonedo was created by master event planners and chefs who designed every experience according to the art of celebration. Today, we house exceptional catering services and create unforgettable memories through our dedication to perfection. From intimate gatherings to grand celebrations, every event is crafted with meticulous attention to detail, ensuring that each moment becomes a cherished memory for you and your guests.
                 </p>
 
-                <button className="group inline-flex items-center gap-3 text-[#3E2723] hover:text-[#7A3E46] transition-colors w-fit">
+                <Link to="/portfolio" className="group inline-flex items-center gap-3 text-[#3E2723] hover:text-[#7A3E46] transition-colors w-fit">
                   <span className=". text-base md:text-lg italic">
                     Discover the Events
                   </span>
                   <ArrowRight className="w-5 h-5 text-[#9D5C63] group-hover:translate-x-2 transition-transform duration-300" />
-                </button>
+                </Link>
               </div>
             </div>
 
