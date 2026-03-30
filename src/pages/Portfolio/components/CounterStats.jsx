@@ -59,22 +59,24 @@ const CounterStats = () => {
 
   const animateCounters = () => {
     statsData.forEach((stat, index) => {
-      gsap.to(
-        {},
-        {
-          duration: 2.5,
-          ease: 'power2.out',
-          onUpdate: function () {
-            const progress = this.progress();
-            const currentValue = Math.floor(stat.end * progress);
-            setCounts(prev => {
-              const newCounts = [...prev];
-              newCounts[index] = currentValue;
-              return newCounts;
-            });
-          }
+      // 1. Create a proxy object with your starting value
+      const counterObj = { value: 0 };
+
+      gsap.to(counterObj, {
+        value: stat.end, // 2. Tell GSAP to animate 'value' to the target number
+        duration: 2.5,
+        ease: 'power2.out',
+        onUpdate: () => {
+          // 3. Grab the current interpolated value directly from the object
+          const currentValue = Math.floor(counterObj.value);
+          
+          setCounts(prev => {
+            const newCounts = [...prev];
+            newCounts[index] = currentValue;
+            return newCounts;
+          });
         }
-      );
+      });
     });
   };
 

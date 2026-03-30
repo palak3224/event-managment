@@ -296,48 +296,54 @@ const ContactPage = () => {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-20 px-6 bg-[#FAF8F5]">
+      <section className="py-20 px-6 bg-gradient-to-b from-[#FAF8F5] to-[#FFF0E5]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] . mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] mb-4">
               Why Choose Khao Khilao Sone Do?
             </h2>
-            <div className="w-24 h-1 bg-[#9D5C63] mx-auto"></div>
+            <div className="w-24 h-1 bg-[#9D5C63] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 rounded-full bg-[#9D5C63] flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#FFF0E5]"></div>
+            <div className="group text-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#9D5C63] to-[#7A4A52] flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-inner">
+                  <span className="text-2xl font-bold text-[#9D5C63]">4+</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 .">
-                15+ Years Experience
+              <h3 className="text-xl font-semibold text-[#3E2723] mb-3">
+                Years Experience
               </h3>
-              <p className="text-[#3E2723]/80">
+              <p className="text-[#3E2723]/70 leading-relaxed">
                 Excellence in event management with a proven track record
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 rounded-full bg-[#9D5C63] flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#FFF0E5]"></div>
+            <div className="group text-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#9D5C63] to-[#7A4A52] flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-inner">
+                  <span className="text-xl font-bold text-[#9D5C63]">80+</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 .">
-                500+ Events Delivered
+              <h3 className="text-xl font-semibold text-[#3E2723] mb-3">
+                Events Delivered
               </h3>
-              <p className="text-[#3E2723]/80">
+              <p className="text-[#3E2723]/70 leading-relaxed">
                 Successfully managed events of all scales and types
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 rounded-full bg-[#9D5C63] flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#FFF0E5]"></div>
+            <div className="group text-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#9D5C63] to-[#7A4A52] flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-inner">
+                  <span className="text-xl font-bold text-[#9D5C63]">24/7</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#3E2723] mb-2 .">
-                24/7 Support
+              <h3 className="text-xl font-semibold text-[#3E2723] mb-3">
+                Support
               </h3>
-              <p className="text-[#3E2723]/80">
+              <p className="text-[#3E2723]/70 leading-relaxed">
                 Dedicated support throughout your entire event journey
               </p>
             </div>
